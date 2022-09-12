@@ -26,6 +26,7 @@ export const Header = styled.h1`
   width: 400px;
   margin: 0 auto 30px;
   color: white;
+  text-align: center;
 `
 
 export const CloseBtn = styled.button`

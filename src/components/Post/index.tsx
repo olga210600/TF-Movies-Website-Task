@@ -1,9 +1,7 @@
 import React from 'react';
-import {IMovie} from "../../store/reducers/moviesReducer";
 import {useDispatch, useSelector} from "react-redux";
-import {removeMovie, likedFilm, watchLateFilm} from '../../store/reducers/moviesReducer'
-// // @ts-ignore
-// // @ts-ignore
+import {removeMovie, likedFilm, watchLateFilm} from '../../store/reducers/moviesReducer';
+import {IPost} from "./type";
 import {
     PostWrapper,
     CloseBtn,
@@ -16,9 +14,9 @@ import {
     WatchLateBtnWrapper
 } from './style'
 
-const Post = ({movie, filmId}: any) => {
-    const isAdmin: IMovie[] = useSelector((state: any) => state.moviesList.isAdmin)
-    const isAuthorized: IMovie[] = useSelector((state: any) => state.moviesList.isAuthorized)
+const Post:React.FC<IPost> = ({movie, filmId}) => {
+    const isAdmin: boolean = useSelector((state: any) => state.moviesList.isAdmin)
+    const isAuthorized: boolean = useSelector((state: any) => state.moviesList.isAuthorized)
     const dispatch = useDispatch()
 
     return (
@@ -31,7 +29,7 @@ const Post = ({movie, filmId}: any) => {
 
                 <Link to={{pathname: `/movie-details?filmId=${filmId}`}}>
                     <MovieImgWrapper>
-                        <MovieImg className='movie-img' src={movie.image}/>
+                        <MovieImg  alt={movie.name} title={movie.name} src={movie.image}/>
                     </MovieImgWrapper>
 
                     <MovieName>{movie.name}</MovieName>

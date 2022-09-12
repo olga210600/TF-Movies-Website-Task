@@ -1,32 +1,31 @@
-import {useDispatch, useSelector} from 'react-redux';
-import {IMovie, addNewMovie} from "../../store/reducers/moviesReducer";
 import React, {useState} from "react";
+import {useDispatch, useSelector} from 'react-redux';
 import PaginationList from 'react-pagination-list';
+import {IMovie, addNewMovie, selectedFilms} from "../../store/reducers/moviesReducer";
 import PageHeader from "../../components/PageHeader";
-import {selectedFilms} from '../../store/reducers/moviesReducer'
 import Post from "../../components/Post";
 import ModalWindow from "../../components/ModalWindow";
-// @ts-ignore
+import {IMainPage} from "./type";
 import {
     Wrapper,
-    HeaderImg,
     HeaderWrapper,
     FilmsWrapper,
-    HeaderLink
-} from './style'
+    HeaderLink,
+    Message
+} from './style';
 
-const Main = ({data, options}) => {
-    const movies: IMovie[] = useSelector((state: any) => state.moviesList.defaultData)
-    const filteredList: IMovie[] = useSelector((state: any) => state.moviesList.filteredMovies)
-    const dispatch = useDispatch()
+const MainPage: React.FC<IMainPage> = ({options}) => {
     const [addModalActive, setAddModalActive] = useState(false)
+    const movies: IMovie[] = useSelector((state: any) => state.moviesList.defaultData);
+    const filteredList: IMovie[] = useSelector((state: any) => state.moviesList.filteredMovies);
+    const dispatch = useDispatch();
 
     const handleCategoryChange = (event) => {
-        dispatch(selectedFilms(event.target.value))
+        dispatch(selectedFilms(event.target.value));
     }
 
     const currentFunction = (values) => {
-        dispatch(addNewMovie(values))
+        dispatch(addNewMovie(values));
     }
 
     return (
@@ -49,18 +48,24 @@ const Main = ({data, options}) => {
             </HeaderWrapper>
 
             <FilmsWrapper>
-                <PaginationList
-                    data={filteredList}
-                    pageSize={8}
-                    layout={"row"}
-                    renderItem={(item, key) => (
-                        <Post filmId={item.id} key={key} movie={item}/>
-                    )}
-                />
+                {
+                    filteredList.length ?
+                        <PaginationList
+                            data={filteredList}
+                            pageSize={8}
+                            layout={"row"}
+                            renderItem={(item, index) => (
+                                <Post filmId={item.id} key={index} movie={item}/>
+                            )}
+                        />
+                        :
+                        <Message>No movies in this category</Message>
+                }
+
             </FilmsWrapper>
 
         </Wrapper>
     );
 };
 
-export default Main;
+export default MainPage;

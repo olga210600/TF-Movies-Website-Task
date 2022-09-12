@@ -1,8 +1,12 @@
-import React, {useMemo, useState} from "react";
+// @ts-nocheck
+import React from "react";
+import {useDispatch, useSelector} from "react-redux";
 import {Formik, Field, Form} from "formik";
 import {validateSchema} from "./schema";
-// import {Link as RouterLink} from "react-router-dom";
-
+import {userLogIn, adminLogIn} from "../../store/reducers/moviesReducer";
+import {Link,} from '../../components/RouterNavigation/style';
+import {PATHS} from '../../components/RouterNavigation';
+import {createBrowserHistory} from "history";
 import {
     Wrapper,
     FormField,
@@ -15,38 +19,19 @@ import {
     StarEmail,
     LogInWrapper
 } from "./styles";
-import {IMovie} from "../../store/reducers/moviesReducer";
-import {useDispatch, useSelector} from "react-redux";
-import {userLogIn, adminLogIn} from "../../store/reducers/moviesReducer"
-import {Link, } from '../../components/RouterNavigation/style'
-import { PATHS} from '../../components/RouterNavigation'
-import {createBrowserHistory} from "history";
-import isEmpty from "lodash/isEmpty";
 
-
-//
-// export const Link = styled(RouterLink)`
-//
-//  `
-
-const EssentialForm = () => {
-
-
-
+const RegistrationForm = () => {
+    const isAuthorized: boolean = useSelector((state: any) => state.moviesList.isAuthorized);
+    const isAdmin: boolean = useSelector((state: any) => state.moviesList.isAdmin);
+    const dispatch = useDispatch();
     const history = createBrowserHistory();
     const currentPage = history.location.pathname;
-    const isAuthorized: boolean = useSelector((state: any) => state.moviesList.isAuthorized)
-    const isAdmin: boolean = useSelector((state: any) => state.moviesList.isAdmin)
-    const dispatch = useDispatch()
 
     const getUser = (object) => {
         const userInfo = Object.values(object)
         if (userInfo[0] === process.env.REACT_APP_ADMIN_LOGIN && userInfo[1] === process.env.REACT_APP_ADMIN_PASSWORD) {
-
-            // @ts-ignore
             dispatch(adminLogIn(isAdmin))
         } else {
-            // @ts-ignore
             dispatch(userLogIn(isAuthorized))
         }
     }
@@ -80,7 +65,7 @@ const EssentialForm = () => {
 
                             <FormField isError={errors?.email && touched.email}>
                                 <LabelWrapper>
-                                   <label htmlFor="email">Email</label>
+                                    <label htmlFor="email">Email</label>
                                     <StarEmail>*</StarEmail>
                                 </LabelWrapper>
 
@@ -91,7 +76,7 @@ const EssentialForm = () => {
                                     type="email"
                                 />
 
-                                {errors?.email && touched.email && <ErrorMessage>{errors?.email }</ErrorMessage>}
+                                {errors?.email && touched.email && <ErrorMessage>{errors?.email}</ErrorMessage>}
                             </FormField>
 
                             <FormField isError={errors?.password && touched.password}>
@@ -116,7 +101,6 @@ const EssentialForm = () => {
                                     <LogInWrapper>
                                         <Link isActive={currentPage === PATHS.MAIN} to={PATHS.MAIN}
                                               onClick={() => getUser(values)}
-                                              // disabled={!isEmpty(errors) }
                                         >
                                             Log in
                                         </Link>
@@ -131,6 +115,5 @@ const EssentialForm = () => {
     );
 };
 
-
-export default EssentialForm;
+export default RegistrationForm;
 

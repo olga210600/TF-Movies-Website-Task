@@ -1,15 +1,20 @@
+// @ts-nocheck
 import React, {useState} from 'react';
+import {useDispatch, useSelector} from "react-redux";
 import Navigation, {PATHS} from "../RouterNavigation";
-import ModalWindow from "../ModalWindow";
 import {
-    IMovie,
     editMovie,
     likedFilm,
     watchLateFilm,
     removeMovie
 } from "../../store/reducers/moviesReducer";
-
-import {PageWrapper,
+import {mockedOptions} from "../../suggestions";
+import ModalWindow from "../ModalWindow";
+import deleteImg from '../../assets/delete-svgrepo-com.svg';
+import editImg from '../../assets/edit-svgrepo-com.svg';
+import {ICurrentFilmInfo} from './type'
+import {
+    PageWrapper,
     Link,
     EditBtnWrapper,
     MovieDescription,
@@ -29,26 +34,16 @@ import {PageWrapper,
     MovieVideo,
     UserBtnWrapper,
     WatchLateBtn
-} from './style'
-import {useDispatch, useSelector} from "react-redux";
-// @ts-ignore
-import deleteImg from '../../img/delete-svgrepo-com.svg'
-// @ts-ignore
-import editImg from '../../img/edit-svgrepo-com.svg'
-// @ts-ignore
-import HeaderImgPost from "../../img/interstellar-movie-movies-astronaut-sea-wallpaper-preview.jpg";
-import {mockedOptions} from "../../router";
+} from './style';
 
-const FilmPageInfo = ({movie}) => {
-    const isAdmin: IMovie[] = useSelector((state: any) => state.moviesList.isAdmin)
-    const movies: IMovie[] = useSelector((state: any) => state.moviesList)
-    const isAuthorized: IMovie[] = useSelector((state: any) => state.moviesList.isAuthorized)
-    const isActiveModalWindow: IMovie[] = useSelector((state: any) => state.isActiveModalWindow)
-    const dispatch = useDispatch()
-    const [editModalActive, setEditModalActive] = useState(false)
+const CurrentFilmInfo: React.FC<ICurrentFilmInfo> = ({movie}) => {
+    const [editModalActive, setEditModalActive] = useState(false);
+    const dispatch = useDispatch();
+    const isAdmin: boolean = useSelector((state: any) => state.moviesList.isAdmin);
+    const isAuthorized: boolean = useSelector((state: any) => state.moviesList.isAuthorized);
 
     const currentFunction = (values) => {
-        dispatch(editMovie(values))
+        dispatch(editMovie(values));
     }
 
     return (
@@ -87,6 +82,7 @@ const FilmPageInfo = ({movie}) => {
                                     <img
                                         src={editImg}
                                         alt='editBtn'
+                                        title='editBtn'
                                         onClick={() => setEditModalActive(true)}
                                     />
                                 </BtnWrapper>
@@ -95,7 +91,7 @@ const FilmPageInfo = ({movie}) => {
 
                             <DeleteBtnWrapper>
                                 <Link to={PATHS.MAIN} onClick={() => dispatch(removeMovie(movie.id))}>
-                                    <img title='delete film' src={deleteImg}/>
+                                    <img title='delete film' alt='delete film' src={deleteImg}/>
                                 </Link>
                             </DeleteBtnWrapper>
 
@@ -133,4 +129,4 @@ const FilmPageInfo = ({movie}) => {
     );
 };
 
-export default FilmPageInfo;
+export default CurrentFilmInfo;

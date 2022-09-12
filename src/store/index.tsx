@@ -1,4 +1,4 @@
-import {configureStore, combineReducers} from '@reduxjs/toolkit'
+import {configureStore, combineReducers} from '@reduxjs/toolkit';
 import {moviesReducer} from "./reducers/moviesReducer";
 import {
     persistStore,
@@ -35,4 +35,4 @@ const store = configureStore({
 
 export const persistor = persistStore(store);
 
-export default store
+export default store;

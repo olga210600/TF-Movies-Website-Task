@@ -1,12 +1,12 @@
+// @ts-nocheck
 import React from "react";
-import {createBrowserHistory} from "history";
-import {IMovie} from "../../store/reducers/moviesReducer";
 import {useDispatch, useSelector} from "react-redux";
-import {logOut} from '../../store/reducers/moviesReducer'
-// @ts-ignore
-import add from '../../img/add-tool-svgrepo-com.svg'
-// @ts-ignore
-import HeaderImgPost from "../../img/interstellar-movie-movies-astronaut-sea-wallpaper-preview.jpg"
+import {IMovie} from "../../store/reducers/moviesReducer";
+import {logOut} from '../../store/reducers/moviesReducer';
+import {createBrowserHistory} from "history";
+import {mockedOptions} from "../../suggestions";
+import HeaderImgPost from "../../assets/interstellar-movie-movies-astronaut-sea-wallpaper-preview.jpg";
+import {INavigation} from "./type";
 import {
     Wrapper,
     Link,
@@ -23,7 +23,7 @@ import {
     UserFilmWrapper,
     WatchLateFilmsWrapper,
     LogoName
-} from './style'
+} from './style';
 
 export const PATHS = {
     MAIN: "/",
@@ -32,16 +32,16 @@ export const PATHS = {
     WATCH_LATE_MOVIE_PAGE: '/watch-late-movies'
 };
 
-const Navigation = ({setAddModalActive, handleCategoryChange}: any) => {
+const Navigation:React.FC<INavigation> = ({setAddModalActive, handleCategoryChange}) => {
+    const movies: IMovie[] = useSelector((state: any) => state.moviesList.defaultData);
+    const isUser: boolean = useSelector((state: any) => state.moviesList.isAuthorized);
+    const isAdmin: boolean = useSelector((state: any) => state.moviesList.isAdmin);
     const history = createBrowserHistory();
     const currentPage = history.location.pathname;
-    const movies: IMovie[] = useSelector((state: any) => state.moviesList.defaultData)
-    const isUser: boolean = useSelector((state: any) => state.moviesList.isAuthorized)
-    const isAdmin: boolean = useSelector((state: any) => state.moviesList.isAdmin)
 
     const likedMovies = movies.reduce((acc: IMovie[], movie: IMovie): IMovie[] => {
         if (movie.isLiked) {
-            acc.push(movie)
+            acc.push(movie);
         }
 
         return acc
@@ -49,13 +49,13 @@ const Navigation = ({setAddModalActive, handleCategoryChange}: any) => {
 
     const watchedLateMovies = movies.reduce((acc: IMovie[], movie: IMovie): IMovie[] => {
         if (movie.isWatchLate) {
-            acc.push(movie)
+            acc.push(movie);
         }
 
         return acc
     }, [])
 
-    const dispatch = useDispatch()
+    const dispatch = useDispatch();
 
     return (
         <Wrapper>
@@ -66,7 +66,10 @@ const Navigation = ({setAddModalActive, handleCategoryChange}: any) => {
 
             <HeaderWrapper>
                 <LogoNameWrapper>
-                    <LogoName>GalacticFilms</LogoName>
+
+                    <LogoName isActive={currentPage === PATHS.MAIN} to={PATHS.MAIN}>
+                        GalacticFilms
+                    </LogoName>
                 </LogoNameWrapper>
                 <nav>
                     <LinkWrapper>
@@ -81,14 +84,10 @@ const Navigation = ({setAddModalActive, handleCategoryChange}: any) => {
                                 onChange={handleCategoryChange}
                             >
                                 <option value="">All genres of films</option>
-                                <option value="action movie">Action movie</option>
-                                <option value="comedy">Comedy</option>
-                                <option value="adventure movie">Adventure movie</option>
-                                <option value="drama">Drama</option>
-                                <option value="fantasy movie">Fantasy movie</option>
-                                <option value="historical movie">Historical movie</option>
-                                <option value="horror movie">Horror movie</option>
-                                <option value="cartoons">Cartoons</option>
+                                {mockedOptions.map((option, index) => (
+                                    <option key={index} value={option.value}>{option.label}</option>
+                                ))}
+
                             </select>
 
                         </SelectWrapper>
@@ -121,7 +120,9 @@ const Navigation = ({setAddModalActive, handleCategoryChange}: any) => {
 
                     <RegistrationWrapper>
                         {isAdmin &&
-                        <AddBtn isActive={currentPage === '/movie-details'} onClick={() => setAddModalActive(true)}>
+                        <AddBtn isActive={currentPage === '/movie-details'} onClick={() => {
+                            setAddModalActive(true)
+                        }}>
                             Add Film</AddBtn>
                         }
 

@@ -1,10 +1,12 @@
-import React, {useCallback, useMemo} from 'react';
+import React, {useMemo} from 'react';
 import {Formik, Field, Form} from "formik";
 import {validateSchema} from "./schema";
 import {v4 as uuidv4} from 'uuid';
-import isEmpty from 'lodash/isEmpty'
+import isEmpty from 'lodash/isEmpty';
+import FieldWrapper from "../FieldWrapper";
+import {IModalWindow} from "./type";
+import SelectComponent from "../SelectComponent";
 import {
-    Select,
     CurrentBtnWrapper,
     CloseBtn,
     ModalContent,
@@ -26,38 +28,13 @@ const getInitialValues = (data) => ({
     id: data?.id ?? uuidv4(),
 });
 
-// @ts-ignore
-// @ts-ignore
-
-const SelectComponent = ({options, value, field: {name}, form: {setFieldValue, values}}) => {
-    const handleChange = useCallback((e) => {
-
-        if (e.target.value) {
-            setFieldValue(name, e.target.value)
-        }
-    }, [name, setFieldValue])
-
-    return (
-        <Select onChange={handleChange}>
-            {
-                options.map((option) => (
-                    <option value={option.value} selected={value === option.value}>{option.label}</option>
-                ))
-            }
-        </Select>
-    )
-}
-
-const ModalWindow = ({date, options, currentFunction, currentButton, handleClose}) => {
+const ModalWindow:React.FC<IModalWindow> = ({date, options, currentFunction, currentButton, handleClose}) => {
     const initialValues = useMemo(() => getInitialValues(date), [date]);
 
-    // @ts-ignore
     return (
 
         <Modal>
-            <ModalContent
-                // onClick={e => e.stopPropagation()}
-            >
+            <ModalContent>
                 <div>
                     <Formik
                         initialValues={initialValues}
@@ -67,40 +44,35 @@ const ModalWindow = ({date, options, currentFunction, currentButton, handleClose
                         validateOnMount
                     >
                         {({values, errors, touched}) => {
-                            // @ts-ignore
-                            // @ts-ignore
-                            // @ts-ignore
+
 
                             return (
                                 <Form>
                                     <Header>Fill in the movie fields</Header>
 
-                                    <FormField isError={errors?.name && touched.name}>
-                                        <label htmlFor="name">Movie name: </label>
-                                        <Field id="name" name="name" placeholder="name"/>
+                                    <FieldWrapper fieldName='name'
+                                                  fieldId='name'
+                                                  placeholder='Movie name'
+                                                  fieldLabel='Movie name:'
+                                                  errors={errors}
+                                                  touched={touched}
+                                    />
 
-                                        {errors?.name && touched.name && (
-                                            <ErrorMessage>{errors?.name}</ErrorMessage>
-                                        )}
-                                    </FormField>
+                                    <FieldWrapper fieldName='image'
+                                                  fieldId='image'
+                                                  placeholder='Movie image'
+                                                  fieldLabel='Movie image:'
+                                                  errors={errors}
+                                                  touched={touched}
+                                    />
 
-                                    <FormField isError={errors?.image && touched.image}>
-                                        <label htmlFor="image"> Movie image:</label>
-                                        <Field id="image" name="image" placeholder="image"/>
-
-                                        {errors?.image && touched.image && (
-                                            <ErrorMessage>{errors?.image}</ErrorMessage>
-                                        )}
-                                    </FormField>
-
-                                    <FormField isError={errors?.year && touched.year}>
-                                        <label htmlFor="year">Movie year:</label>
-                                        <Field id="year" name="year" placeholder="year"/>
-
-                                        {errors?.year && touched.year && (
-                                            <ErrorMessage>{errors?.year}</ErrorMessage>
-                                        )}
-                                    </FormField>
+                                    <FieldWrapper fieldName='year'
+                                                  fieldId='year'
+                                                  placeholder='Movie year'
+                                                  fieldLabel='Movie year:'
+                                                  errors={errors}
+                                                  touched={touched}
+                                    />
 
                                     <FormField isError={errors?.genre && touched.genre}>
                                         <label htmlFor="genre">Genre</label>
@@ -117,33 +89,29 @@ const ModalWindow = ({date, options, currentFunction, currentButton, handleClose
                                         )}
                                     </FormField>
 
-                                    <FormField isError={errors?.description && touched.description}>
-                                        <label htmlFor="description">Movie description:</label>
-                                        <Field id="description" name="description"
-                                               placeholder="description"/>
+                                    <FieldWrapper fieldName='description'
+                                                  fieldId='description'
+                                                  placeholder='Movie description'
+                                                  fieldLabel='Movie description:'
+                                                  errors={errors}
+                                                  touched={touched}
+                                    />
 
-                                        {errors?.description && touched.description && (
-                                            <ErrorMessage>{errors?.description}</ErrorMessage>
-                                        )}
-                                    </FormField>
+                                    <FieldWrapper fieldName='director'
+                                                  fieldId='director'
+                                                  placeholder='Movie director'
+                                                  fieldLabel='Movie director:'
+                                                  errors={errors}
+                                                  touched={touched}
+                                    />
 
-                                    <FormField isError={errors?.director && touched.director}>
-                                        <label htmlFor="director"> Movie director:</label>
-                                        <Field id="director" name="director" placeholder="director"/>
-
-                                        {errors?.director && touched.director && (
-                                            <ErrorMessage>{errors?.director}</ErrorMessage>
-                                        )}
-                                    </FormField>
-
-                                    <FormField isError={errors?.video && touched.video}>
-                                        <label htmlFor="video"> Movie video:</label>
-                                        <Field id="video" name="video" placeholder="video"/>
-
-                                        {errors?.video && touched.video && (
-                                            <ErrorMessage>{errors?.video}</ErrorMessage>
-                                        )}
-                                    </FormField>
+                                    <FieldWrapper fieldName='video'
+                                                  fieldId='video'
+                                                  placeholder='Movie video'
+                                                  fieldLabel='Movie video:'
+                                                  errors={errors}
+                                                  touched={touched}
+                                    />
 
                                     <CurrentBtnWrapper>
                                         <CurrentBtn type="submit"
@@ -157,7 +125,9 @@ const ModalWindow = ({date, options, currentFunction, currentButton, handleClose
                                         </CurrentBtn>
                                     </CurrentBtnWrapper>
 
-                                    <CloseBtn onClick={() => {handleClose()}}>
+                                    <CloseBtn onClick={() => {
+                                        handleClose()
+                                    }}>
                                         &#10006;
                                     </CloseBtn>
                                 </Form>

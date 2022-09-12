@@ -21,10 +21,13 @@ export const LogoNameWrapper = styled.div`
   min-width: 330px;
 `
 
-export const LogoName = styled.h1`
+export const LogoName = styled(RouterLink)`
   font-family: 'Teko', Arial, sans-serif;
   font-size: 50px;
   width: 327px;
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
 `
 
 export const LinkWrapper = styled.div`
@@ -65,8 +68,8 @@ export const LogInOutWrapper = styled.div`
 export const Link = styled(RouterLink)`
   text-decoration: none;
 
-  && {
-    text-decoration: ${({isActive}) => (isActive ? "underline red" : "none")};
+  && {     
+    border-bottom: ${({isActive}) => (isActive ? "2px solid red" : "none")};
     color: ${({isActive}) => (isActive ? "white" : "white")};
     margin-right: 15px;
     padding: 5px;

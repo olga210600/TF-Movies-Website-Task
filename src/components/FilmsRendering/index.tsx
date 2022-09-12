@@ -1,41 +1,27 @@
 import React from 'react';
-import {IMovie} from "../../store/reducers/moviesReducer";
-import {useSelector} from "react-redux";
-import Post from "../../components/Post";
-import Navigation from "../../components/RouterNavigation";
 import PaginationList from 'react-pagination-list';
-import {Wrapper, FilmsWrapper} from './style'
+import Navigation from "../../components/RouterNavigation";
+import Post from "../../components/Post";
+import {IFilmsRendering} from './type';
+import {
+    Wrapper,
+    FilmsWrapper
+} from './style';
 
-const FilmsRendering = ({currentValue}) => {
-    const filteredList: IMovie[] = useSelector((state: any) => state.moviesList.filteredMovies)
-    const array = []
+const FilmsRendering:React.FC<IFilmsRendering> = ({movies}) => {
 
     return (
         <Wrapper>
-            <Navigation/>
+            <Navigation handleCategoryChange={undefined} setAddModalActive={undefined}/>
 
             <FilmsWrapper>
-                {
-                    filteredList.map(movie => {
-                            if (currentValue === 'isLiked') {
-                                if (movie.isLiked === true) {
-                                    array.push(movie)
-                                }
-                            } else if (currentValue === 'isWatchLate')
-                                if (movie.isWatchLate === true) {
-                                    array.push(movie)
-                                }
-                        }
-                    )
-                }
-
                 <FilmsWrapper>
                     <PaginationList
-                        data={array}
+                        data={movies}
                         pageSize={8}
                         layout={"row"}
-                        renderItem={(item, key) => (
-                            <Post filmId={item.id} key={key} movie={item}/>
+                        renderItem={(item, index) => (
+                            <Post filmId={item.id} key={index} movie={item}/>
                         )}
                     />
                 </FilmsWrapper>

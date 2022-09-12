@@ -1,12 +1,12 @@
 import React from 'react';
+import {useSelector} from "react-redux";
 import {createBrowserHistory} from 'history'
 import {IMovie} from "../../store/reducers/moviesReducer";
-import {useSelector} from "react-redux";
-import FilmPageInfo from "../FilmPageInfo";
+import CurrentFilmInfo from "../../components/CurrentFilmInfo";
 
-const FilmPage = (props) => {
-    const history = createBrowserHistory()
+const FilmPage = () => {
     const movies: IMovie[] = useSelector((state: any) => state.moviesList.defaultData)
+    const history = createBrowserHistory()
     const params = new URLSearchParams(history.location.search);
     const filmName = params.get("filmId");
 
@@ -14,11 +14,10 @@ const FilmPage = (props) => {
         <div>
             {
                 movies.map(movie => {
-
                         if (movie.id === filmName) {
 
                             return (
-                                <FilmPageInfo movie={movie}/>
+                                <CurrentFilmInfo movie={movie}/>
                             )
                         }
 

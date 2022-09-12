@@ -1,5 +1,5 @@
-import {createSlice, current} from '@reduxjs/toolkit';
-import {defaultData} from "../defaultData";
+import {createSlice} from '@reduxjs/toolkit';
+import {defaultData} from "../../suggestions";
 import cloneDeep from "lodash/cloneDeep";
 
 export interface IMovie {
@@ -15,9 +15,6 @@ export interface IMovie {
     isWatchLate: boolean,
     isActiveModalWindow: boolean
 }
-
-// @ts-ignore
-// @ts-ignore
 
 const moviesSlice = createSlice({
     initialState: {
@@ -53,16 +50,16 @@ const moviesSlice = createSlice({
             const copiedFilteredMovies = cloneDeep(state.filteredMovies)
 
             const likedDefaultData = copiedDefaultData.map((movie) => {
-                movie.isLiked = false
-                movie.isWatchLate = false
-                return movie
+                movie.isLiked = false;
+                movie.isWatchLate = false;
+                return movie;
             })
 
             const likedFilteredMovies = copiedFilteredMovies.map((movie) => {
-                movie.isLiked = false
-                movie.isWatchLate = false
+                movie.isLiked = false;
+                movie.isWatchLate = false;
 
-                return movie
+                return movie;
             })
             return {
                 ...state,
@@ -87,8 +84,8 @@ const moviesSlice = createSlice({
             }
         },
         removeMovie(state, action) {
-            const clonedDefaultData = state.defaultData.filter(movie => movie.id !== action.payload)
-            const clonedFilteredMovies = state.filteredMovies.filter(movie => movie.id !== action.payload)
+            const clonedDefaultData = state.defaultData.filter(movie => movie.id !== action.payload);
+            const clonedFilteredMovies = state.filteredMovies.filter(movie => movie.id !== action.payload);
 
             return {
                 ...state,
@@ -97,22 +94,21 @@ const moviesSlice = createSlice({
             }
         },
         editMovie(state, action): any {
-            // @ts-ignore
 
             const clonedStateDefaultData = state.defaultData.map(movie => {
                 if (movie.id === action.payload.id) {
-                    movie = action.payload
-                    return movie
+                    movie = action.payload;
+                    return movie;
                 }
-                return movie
+                return movie;
             })
 
             const clonedStateFilteredMovies = state.filteredMovies.map(movie => {
                 if (movie.id === action.payload.id) {
-                    movie = action.payload
-                    return movie
+                    movie = action.payload;
+                    return movie;
                 }
-                return movie
+                return movie;
             })
             return {
                 ...state,
@@ -121,22 +117,22 @@ const moviesSlice = createSlice({
             }
         },
         likedFilm(state, action): any {
-            const copiedDefaultData = cloneDeep(state.defaultData)
-            const copiedFilteredMovies = cloneDeep(state.filteredMovies)
-             const likedDefaultData = copiedDefaultData.map((movie) => {
+            const copiedDefaultData = cloneDeep(state.defaultData);
+            const copiedFilteredMovies = cloneDeep(state.filteredMovies);
+            const likedDefaultData = copiedDefaultData.map((movie) => {
                 if (movie.id === action.payload) {
-                    movie.isLiked = !movie.isLiked
-                    return movie
+                    movie.isLiked = !movie.isLiked;
+                    return movie;
                 }
-                return movie
+                return movie;
             })
 
             const likedFilteredMovies = copiedFilteredMovies.map((movie) => {
                 if (movie.id === action.payload) {
-                    movie.isLiked = !movie.isLiked
-                    return movie
+                    movie.isLiked = !movie.isLiked;
+                    return movie;
                 }
-                return movie
+                return movie;
             })
 
             return {
@@ -146,25 +142,25 @@ const moviesSlice = createSlice({
             }
         },
         watchLateFilm(state, action): any {
-            const copiedDefaultData = cloneDeep(state.defaultData)
-            const copiedFilteredMovies = cloneDeep(state.filteredMovies)
+            const copiedDefaultData = cloneDeep(state.defaultData);
+            const copiedFilteredMovies = cloneDeep(state.filteredMovies);
 
             const watchLateDefaultData = copiedDefaultData.map((movie) => {
                 if (movie.id === action.payload) {
 
-                    movie.isWatchLate = !movie.isWatchLate
+                    movie.isWatchLate = !movie.isWatchLate;
 
-                    return movie
+                    return movie;
                 }
-                return movie
+                return movie;
             })
 
             const watchLateFilteredMovies = copiedFilteredMovies.map((movie) => {
                 if (movie.id === action.payload) {
-                    movie.isWatchLate = !movie.isWatchLate
-                    return movie
+                    movie.isWatchLate = !movie.isWatchLate;
+                    return movie;
                 }
-                return movie
+                return movie;
             })
 
             return {
@@ -173,7 +169,6 @@ const moviesSlice = createSlice({
                 filteredMovies: watchLateFilteredMovies,
             }
         },
-
     }
 })
 

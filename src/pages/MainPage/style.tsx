@@ -19,6 +19,16 @@ export const Wrapper = styled.div`
   }
 `
 
+export const Message = styled.h1`
+  width: 500px;
+  height: 100px;
+  //background: blue;
+  color: white;
+  font-size: 35px;
+  margin: auto;
+  text-align: center;
+`
+
 export const HeaderWrapper = styled.div`
   height: 380px;
   position: relative;

@@ -16,13 +16,13 @@ const validateMessages = {
     },
     description: {
         required: "Movie description cannot be empty",
-        min: "Movie description cannot be less than 2 characters",
-        max: "Movie description cannot be longer than 40 characters",
+        min: "Movie description cannot be less than 4 characters",
+        max: "Movie description cannot be longer than 500 characters",
     },
     director: {
         required: "Movie director cannot be empty",
-        min: "Movie director cannot be less than 2 characters",
-        max: "Movie director cannot be longer than 40 characters",
+        min: "Movie director cannot be less than 4 characters",
+        max: "Movie director cannot be longer than 50 characters",
     },
     video: {
         required: "Movie video cannot be empty",
@@ -32,7 +32,8 @@ const validateMessages = {
 export const validateSchema = Yup.object().shape({
     name: Yup.string()
         .required(validateMessages.name.required)
-        .min(2, validateMessages.name.min),
+        .min(2, validateMessages.name.min)
+        .max(40, validateMessages.name.max),
     image: Yup.string()
         .required(validateMessages.image.required),
     year: Yup.string()
@@ -41,7 +42,8 @@ export const validateSchema = Yup.object().shape({
         .max(4, validateMessages.year.max),
     description: Yup.string()
         .required(validateMessages.description.required)
-        .min(4, validateMessages.description.min),
+        .min(4, validateMessages.description.min)
+        .max(500, validateMessages.description.max),
     director: Yup.string()
         .required(validateMessages.director.required)
         .min(4, validateMessages.director.min)
