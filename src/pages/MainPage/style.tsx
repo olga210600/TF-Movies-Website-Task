@@ -4,7 +4,7 @@ export const Wrapper = styled.div`
   background: #2b2a2a;
   box-sizing: border-box;
   padding-bottom: 50px;
-  min-width: 1200px;
+  min-width: 670px;
 
   & div {
     & div {
@@ -22,7 +22,6 @@ export const Wrapper = styled.div`
 export const Message = styled.h1`
   width: 500px;
   height: 100px;
-  //background: blue;
   color: white;
   font-size: 35px;
   margin: auto;
@@ -35,21 +34,12 @@ export const HeaderWrapper = styled.div`
   color: white;
 `
 
-
-export const HeaderImg = styled.img`
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0.5;
-`
-
 export const HeaderLink = styled.div`
   width: 100%;
   height: 40px;
   position: absolute;
   top: 0;
   box-sizing: border-box;
-
 `
 
 export const FilmsWrapper = styled.div`

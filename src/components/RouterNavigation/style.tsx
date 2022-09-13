@@ -3,7 +3,7 @@ import {Link as RouterLink} from "react-router-dom";
 
 export const Wrapper = styled.div`
   display: flex;
-  min-width: 1200px;
+  min-width: 670px;
   position: relative;
   
   & nav {
@@ -13,9 +13,22 @@ export const Wrapper = styled.div`
     width: 70%;
     height: 50px;
     align-items: center;
+    
+    @media (min-width: 949px) and (max-width: 1215px)  {
+      justify-content: center;
+    }
+
+    @media (min-width: 670px) and (max-width: 948px)  {
+     width: 100%;
+      justify-content: center;
+    }
+
+    @media (min-device-width: 320px) and (max-device-width: 568px) {
+      justify-content: center;
+      width: 100%;
+    }
   }
 `
-
 export const LogoNameWrapper = styled.div`
   width: 30%;
   min-width: 330px;
@@ -128,7 +141,7 @@ export const HeaderImg = styled.img`
 
 export const HeaderWrapper = styled.div`
   position: absolute;
-  top: 25px;
+  top: 20px;
   display: flex;
   color: white;
   width: 92%;
@@ -137,15 +150,31 @@ export const HeaderWrapper = styled.div`
   margin-left: 4%;
   margin-right: 4%;
   left: -1px;
+  flex-wrap: wrap;
 
-  //@media (max-width: 1213px)  { 
-  //  width:800px ;
-  //  
-  //  background: rebeccapurple;
-  //  justify-content: center;
-  //  //color: rebeccapurple;
-  //  display: block;
-  //  margin: auto;
-  //}
+  @media (min-width: 949px) and (max-width: 1215px)  {
+    width: 900px;
+    top: 65px;
+    justify-content: center;
+    margin: auto;
+    align-items: center;
+    text-align: center;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  @media (min-width: 670px) and (max-width: 948px)  {
+    width: 600px;
+    top: 65px;
+    justify-content: center;
+    margin: auto;
+    align-items: center;
+    text-align: center;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 
+  @media (min-device-width: 320px) and (max-device-width: 568px) {
+    background: red;
+  }
 `

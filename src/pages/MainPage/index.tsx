@@ -40,7 +40,8 @@ const MainPage: React.FC<IMainPage> = ({options}) => {
                             options={options}
                             currentButton='Add'
                             currentFunction={currentFunction}
-                            date={movies} handleClose={() => setAddModalActive(false)}
+                            date={movies}
+                            handleClose={() => setAddModalActive(false)}
                         />
                     }
                 </HeaderLink>
@@ -54,8 +55,11 @@ const MainPage: React.FC<IMainPage> = ({options}) => {
                             data={filteredList}
                             pageSize={8}
                             layout={"row"}
+
+
                             renderItem={(item, index) => (
                                 <Post filmId={item.id} key={index} movie={item}/>
+
                             )}
                         />
                         :

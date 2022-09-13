@@ -45,7 +45,7 @@ const ModalWindow:React.FC<IModalWindow> = ({date, options, currentFunction, cur
                     >
                         {({values, errors, touched}) => {
 
-
+                            console.log('errors',errors)
                             return (
                                 <Form>
                                     <Header>Fill in the movie fields</Header>

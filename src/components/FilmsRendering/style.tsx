@@ -4,7 +4,9 @@ export const Wrapper = styled.div`
   background: #2b2a2a;
   box-sizing: border-box;
   padding-bottom: 50px;
-  min-width: 1200px;
+  min-width: 670px;
+  height: 100%;
+  min-height: 1500px;
 
   & div {
 
@@ -21,7 +23,6 @@ export const Wrapper = styled.div`
 `
 
 export const FilmsWrapper = styled.div`
-  width: 1000px;
   display: flex;
   justify-content: center;
   margin: -85px auto 0;

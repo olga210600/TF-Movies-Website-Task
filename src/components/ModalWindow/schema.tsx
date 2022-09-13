@@ -17,7 +17,6 @@ const validateMessages = {
     description: {
         required: "Movie description cannot be empty",
         min: "Movie description cannot be less than 4 characters",
-        max: "Movie description cannot be longer than 500 characters",
     },
     director: {
         required: "Movie director cannot be empty",
@@ -42,8 +41,7 @@ export const validateSchema = Yup.object().shape({
         .max(4, validateMessages.year.max),
     description: Yup.string()
         .required(validateMessages.description.required)
-        .min(4, validateMessages.description.min)
-        .max(500, validateMessages.description.max),
+        .min(4, validateMessages.description.min),
     director: Yup.string()
         .required(validateMessages.director.required)
         .min(4, validateMessages.director.min)

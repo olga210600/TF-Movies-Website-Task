@@ -6,8 +6,10 @@ import FilmsRendering from "../../components/FilmsRendering";
 const WatchLateFilmPage = () => {
     const movies: IMovie[] = useSelector((state: any) => state.moviesList.filteredMovies);
 
+    console.log("movies watchLate" ,movies)
+
     const watchLateMovies = movies.reduce((acc: IMovie[], movie: IMovie): IMovie[] => {
-        if (movie.isLiked) {
+        if (movie.isWatchLate) {
             acc.push(movie);
         }
         return acc;

@@ -11,6 +11,12 @@ export const Modal = styled.div`
   align-items: center;
   justify-content: center;
   z-index: 10;
+
+  @media (min-device-width: 320px) and (max-device-width: 568px) {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
 `
 
 export const ModalContent = styled.div`
@@ -47,7 +53,7 @@ export const CurrentBtnWrapper = styled.div`
   justify-content: center;
   align-items: center;
   position: absolute;
-  top: 600px;
+  top: 606px;
   left: 5px;
 `
 
@@ -63,21 +69,6 @@ export const CurrentBtn = styled.button`
   &:disabled {
     background: #a2aba1;
   }
-`
-
-export const Select = styled.select`
-  height: 35px;
-  border-radius: 6px;
-  padding: 0 5px;
-
-  ${({isError}) =>
-    isError
-        ? `
-    border: 2px solid red;
-    `
-        : `
-        border: 2px solid gray;
-    `}
 `
 
 export const ErrorMessage = styled.span`
@@ -113,11 +104,11 @@ export const FormField = styled.div`
     padding: 0 5px;
 
     ${({isError}) =>
-    isError
-        ? `
+            isError
+                    ? `
     border: 2px solid red;
     `
-        : `
+                    : `
         border: 2px solid gray;
     `}
     ::placeholder {

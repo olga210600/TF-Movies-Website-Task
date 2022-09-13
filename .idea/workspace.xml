@@ -2,59 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="51c7d252-da25-4583-b791-a3743993bce3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/CurrentFilmInfo/type.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/FieldWrapper/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/FieldWrapper/type.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/FilmsRendering/type.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ModalWindow/type.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/PageHeader/type.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Post/type.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/RouterNavigation/type.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/SelectComponent/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/SelectComponent/style.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/SelectComponent/type.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/MainPage/type.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/router/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/suggestions.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/FilmPage/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/FilmPage/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/FilmPageInfo/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CurrentFilmInfo/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/FilmPageInfo/style.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CurrentFilmInfo/style.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/FilmsRendering/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/FilmsRendering/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CurrentFilmInfo/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CurrentFilmInfo/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CurrentFilmInfo/style.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CurrentFilmInfo/style.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/FilmsRendering/style.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/FilmsRendering/style.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ModalWindow/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ModalWindow/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ModalWindow/schema.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ModalWindow/schema.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ModalWindow/style.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ModalWindow/style.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PageHeader/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PageHeader/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Post/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Post/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/RouterNavigation/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/RouterNavigation/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/RouterNavigation/style.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/RouterNavigation/style.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/1640212391_5-abrakadabra-fun-p-fon-listya-paporotnika-5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/Avengers_Endgame_Banner.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/DayShift.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/add-tool-svgrepo-com.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/add-tool-svgrepo-com.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/delete-svgrepo-com.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/delete-svgrepo-com.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/edit-svgrepo-com.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/edit-svgrepo-com.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/exit-svgrepo-com (1).svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/fern-leaves-on-dark-background-in-jungle-dense-dark-green-fern-leaves-in-garden-at-night-nature-abstract-background-fern-at-tropical-forest-exotic-plant_33867-774.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/headerPage — копия.jfif" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/headerPage — копия.jfif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/headerPage.jfif" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/headerPage.jfif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/interstellar-movie-movies-astronaut-sea-wallpaper-preview.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/interstellar-movie-movies-astronaut-sea-wallpaper-preview.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/like-svgrepo-com.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/likedd-svgrepo-com (2).svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/LikedFilmPage/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/LikedFilmPage/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Main/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/MainPage/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Main/style.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/MainPage/style.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Registration/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/RegistrationPage/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Registration/schema.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/RegistrationPage/schema.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Registration/styles.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/RegistrationPage/styles.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/MainPage/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/MainPage/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/MainPage/style.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/MainPage/style.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/RegistrationPage/styles.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/RegistrationPage/styles.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/WatchLateFilmPage/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/WatchLateFilmPage/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/router/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/defaultData.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/reducers/moviesReducer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/moviesReducer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/suggestions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/suggestions.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,6 +79,7 @@
       <workItem from="1662973725078" duration="247000" />
       <workItem from="1662973977668" duration="17100000" />
       <workItem from="1663011994245" duration="5001000" />
+      <workItem from="1663061070201" duration="11863000" />
     </task>
     <servers />
   </component>

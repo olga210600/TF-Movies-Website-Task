@@ -44,6 +44,7 @@ const CurrentFilmInfo: React.FC<ICurrentFilmInfo> = ({movie}) => {
 
     const currentFunction = (values) => {
         dispatch(editMovie(values));
+        console.log('hete')
     }
 
     return (

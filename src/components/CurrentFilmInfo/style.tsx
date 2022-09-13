@@ -10,7 +10,8 @@ export const PageWrapper = styled.div`
   padding-bottom: 20px;
   justify-content: center;
   margin: 0;
-  min-width: 1200px;
+  //max-width: 1200px;
+  min-width: 670px;
   position: relative;
 `
 
@@ -20,6 +21,7 @@ export const HeaderFilmInfo = styled.div`
 `
 
 export const FilmInfoWrapper = styled.div`
+  width: 600px;
   display: flex;
   box-sizing: border-box;
   justify-content: center;
@@ -31,25 +33,27 @@ export const FilmInfoWrapper = styled.div`
 
 export const FilmInfo = styled.div`
   height: 100%;
+  width: 350px;
   color: white;
   box-sizing: border-box;
+  padding-left: 20px;
 `
 
 export const ImageWrapper = styled.div`
   width: 250px;
   height: 350px;
-  margin: 40px 20px 40px 76px;
+  //margin: 40px 20px 40px 76px;
   object-fit: contain;
 `
 export const Image = styled.img`
   width: 100%;
   height: 100%;
-  margin-left: -58px;
+  
 `
 
 export const MovieName = styled.p`
   font-size: 30px;
-  margin: 30px 0 10px 10px;
+  margin: 0 0 10px 10px;
 `
 
 export const MovieYear = styled.p`
@@ -76,6 +80,11 @@ export const MovieDescription = styled.p`
   text-indent: 20px;
   font-family: sans-serif;
   line-height: 25px;
+
+  @media (min-device-width: 320px) and (max-device-width: 568px) {
+    font-size: 27px;
+    line-height: 45px;
+  }
 `
 
 export const MovieVideo = styled.div`
