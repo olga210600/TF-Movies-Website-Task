@@ -1,21 +1,24 @@
-import React, {useState} from 'react';
-import Navigation from "../../components/RouterNavigation";
-import Post from "../../components/Post";
-import {IFilmsRendering} from './type';
-import Pagination from "../Pagination";
+import React, { useState } from 'react';
+import Navigation          from "../../components/RouterNavigation";
+import Posts               from "../Posts";
+import { IFilmsRendering } from './type';
+import Pagination          from "../Pagination";
 import {
     Wrapper,
     FilmsWrapper
-} from './style';
+}                          from './style';
 
 
-const FilmsRendering: React.FC<IFilmsRendering> = ({movies}) => {
+const FilmsRendering: React.FC<IFilmsRendering> = ({
+     movies
+}) => {
+
     const [currentPage, setCurrentPage] = useState(1)
-    const [filmsPerPage] = useState(10)
+    const [filmsPerPage]                = useState(10)
 
-    const lastFilmIndex = currentPage * filmsPerPage;
+    const lastFilmIndex  = currentPage * filmsPerPage;
     const firstFilmIndex = lastFilmIndex - filmsPerPage;
-    const currentFilms = movies.slice(firstFilmIndex, lastFilmIndex)
+    const currentFilms   = movies.slice(firstFilmIndex, lastFilmIndex)
 
     const paginate = pageNumber => setCurrentPage(pageNumber)
 
@@ -24,7 +27,7 @@ const FilmsRendering: React.FC<IFilmsRendering> = ({movies}) => {
             <Navigation/>
 
             <FilmsWrapper>
-                <Post films={currentFilms}/>
+                <Posts films={currentFilms}/>
             </FilmsWrapper>
 
             <div>

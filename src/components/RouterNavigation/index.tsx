@@ -1,12 +1,12 @@
 // @ts-nocheck
-import React from "react";
+import React                      from "react";
 import {useDispatch, useSelector} from "react-redux";
-import {IMovie} from "../../store/reducers/moviesReducer";
-import {logOut} from '../../store/reducers/moviesReducer';
-import {createBrowserHistory} from "history";
-import {mockedOptions} from "../../suggestions";
-import HeaderImgPost from "../../assets/galaxy-stars-space-24-4k.jpg";
-import {INavigation} from "./type";
+import {IMovie}                   from "../../store/reducers/moviesReducer";
+import {logOut}                   from '../../store/reducers/moviesReducer';
+import {createBrowserHistory}     from "history";
+import {mockedOptions}            from "../../suggestions";
+import HeaderImgPost              from "../../assets/galaxy-stars-space-24-4k.jpg";
+import { INavigation }            from "./type";
 import {
     Wrapper,
     Link,
@@ -24,21 +24,26 @@ import {
     WatchLateFilmsWrapper,
     LogoName,
     LinkLogOut
-} from './style';
+}                                 from './style';
 
 export const PATHS = {
-    MAIN: "/",
-    REGISTRATION_FORM: "/registration-form",
-    LIKED_MOVIE_PAGE: '/liked-movies',
-    WATCH_LATE_MOVIE_PAGE: '/watch-late-movies'
+    MAIN                  : "/",
+    REGISTRATION_FORM     : "/registration-form",
+    LIKED_MOVIE_PAGE      : '/liked-movies',
+    WATCH_LATE_MOVIE_PAGE : '/watch-late-movies'
 };
 
-const Navigation: React.FC<INavigation> = ({setAddModalActive, handleCategoryChange}) => {
+const Navigation: React.FC<INavigation> = ({
+    setAddModalActive,
+    handleCategoryChange,
+}) => {
     const movies: IMovie[] = useSelector((state: any) => state.moviesList.defaultData);
-    const isUser: boolean = useSelector((state: any) => state.moviesList.isAuthorized);
+    const isUser: boolean  = useSelector((state: any) => state.moviesList.isAuthorized);
     const isAdmin: boolean = useSelector((state: any) => state.moviesList.isAdmin);
-    const history = createBrowserHistory();
+
+    const history     = createBrowserHistory();
     const currentPage = history.location.pathname;
+    const dispatch    = useDispatch();
     let mainPage
 
     const likedMovies = movies.reduce((acc: IMovie[], movie: IMovie): IMovie[] => {
@@ -46,8 +51,8 @@ const Navigation: React.FC<INavigation> = ({setAddModalActive, handleCategoryCha
             acc.push(movie);
         }
 
-        return acc
-    }, [])
+        return acc;
+    }, []);
 
     const watchedLateMovies = movies.reduce((acc: IMovie[], movie: IMovie): IMovie[] => {
         if (movie.isWatchLate) {
@@ -55,19 +60,16 @@ const Navigation: React.FC<INavigation> = ({setAddModalActive, handleCategoryCha
         }
 
         return acc
-    }, [])
-
-    const dispatch = useDispatch();
+    }, []);
 
     if (currentPage === PATHS.MAIN) {
         mainPage = true
     } else {
-        mainPage = false
+        mainPage = false;;
     }
 
     return (
         <Wrapper>
-
             <ImgWrapper>
                 <HeaderImg src={HeaderImgPost}/>
             </ImgWrapper>
@@ -96,7 +98,6 @@ const Navigation: React.FC<INavigation> = ({setAddModalActive, handleCategoryCha
                                 {mockedOptions.map((option, index) => (
                                     <option key={index} value={option.value}>{option.label}</option>
                                 ))}
-
                             </select>
                         </SelectWrapper>
                     </LinkWrapper>

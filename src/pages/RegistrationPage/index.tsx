@@ -1,12 +1,12 @@
 // @ts-nocheck
-import React from "react";
-import {useDispatch, useSelector} from "react-redux";
-import {Formik, Field, Form} from "formik";
-import {validateSchema} from "./schema";
-import {userLogIn, adminLogIn} from "../../store/reducers/moviesReducer";
-import {Link,} from '../../components/RouterNavigation/style';
-import {PATHS} from '../../components/RouterNavigation';
-import {createBrowserHistory} from "history";
+import React                        from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { Formik, Field, Form }      from "formik";
+import { validateSchema }           from "./schema";
+import { userLogIn, adminLogIn }    from "../../store/reducers/moviesReducer";
+import { Link }                     from '../../components/RouterNavigation/style';
+import { PATHS }                    from '../../components/RouterNavigation';
+import { createBrowserHistory }     from "history";
 import {
     Wrapper,
     FormField,
@@ -18,17 +18,19 @@ import {
     StarPassword,
     StarEmail,
     LogInWrapper
-} from "./styles";
+}                                   from "./styles";
 
 const RegistrationForm = () => {
     const isAuthorized: boolean = useSelector((state: any) => state.moviesList.isAuthorized);
-    const isAdmin: boolean = useSelector((state: any) => state.moviesList.isAdmin);
-    const dispatch = useDispatch();
-    const history = createBrowserHistory();
+    const isAdmin: boolean      = useSelector((state: any) => state.moviesList.isAdmin);
+
+    const dispatch    = useDispatch();
+    const history     = createBrowserHistory();
     const currentPage = history.location.pathname;
 
     const getUser = (object) => {
-        const userInfo = Object.values(object)
+        const userInfo = Object.values(object);
+
         if (userInfo[0] === process.env.REACT_APP_ADMIN_LOGIN && userInfo[1] === process.env.REACT_APP_ADMIN_PASSWORD) {
             dispatch(adminLogIn(isAdmin))
         } else {
@@ -38,7 +40,6 @@ const RegistrationForm = () => {
 
     return (
         <Wrapper>
-
             <MainPageLinkWrapper>
                 <Link isActive={currentPage === PATHS.MAIN} to={PATHS.MAIN}>
                     Main page
@@ -59,12 +60,12 @@ const RegistrationForm = () => {
 
                     return (
                         <Form>
-
                             <PageHeader>Registration</PageHeader>
 
                             <FormField isError={errors?.email && touched.email}>
                                 <LabelWrapper>
                                     <label htmlFor="email">Email</label>
+
                                     <StarEmail>*</StarEmail>
                                 </LabelWrapper>
 
@@ -81,6 +82,7 @@ const RegistrationForm = () => {
                             <FormField isError={errors?.password && touched.password}>
                                 <LabelWrapper>
                                     <label htmlFor="password"> Password</label>
+
                                     <StarPassword>*</StarPassword>
                                 </LabelWrapper>
 
@@ -103,7 +105,6 @@ const RegistrationForm = () => {
                                         </Link>
                                     </LogInWrapper>
                             }
-
                         </Form>
                     );
                 }}

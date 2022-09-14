@@ -1,8 +1,14 @@
-import React, {useCallback} from "react";
-import {ISelectComponent} from "./type";
-import {Select} from "./style";
+import React, { useCallback } from "react";
+import { ISelectComponent }   from "./type";
+import { Select }             from "./style";
 
-const SelectComponent: React.FC<ISelectComponent> = ({options, value, field: {name}, form: {setFieldValue}}) => {
+const SelectComponent: React.FC<ISelectComponent> = ({
+     options,
+     value,
+     field: {name},
+     form: {setFieldValue},
+}) => {
+
     const handleChange = useCallback((e) => {
 
         if (e.target.value) {

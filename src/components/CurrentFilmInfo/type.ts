@@ -1,5 +1,5 @@
-import {IMovie} from "../../store/reducers/moviesReducer";
+import { IMovie } from "../../store/reducers/moviesReducer";
 
 export interface ICurrentFilmInfo {
-    movie: IMovie;
+    movie : IMovie;
 }

@@ -1,5 +1,5 @@
-import {configureStore, combineReducers} from '@reduxjs/toolkit';
-import {moviesReducer} from "./reducers/moviesReducer";
+import { configureStore, combineReducers } from '@reduxjs/toolkit';
+import { moviesReducer }                   from "./reducers/moviesReducer";
 import {
     persistStore,
     persistReducer,
@@ -9,8 +9,8 @@ import {
     PERSIST,
     PURGE,
     REGISTER,
-} from 'redux-persist';
-import storage from 'redux-persist/lib/storage';
+}                                           from 'redux-persist';
+import storage                              from 'redux-persist/lib/storage';
 
 const rootReducer = combineReducers({
     moviesList: moviesReducer,
@@ -24,8 +24,8 @@ const persistConfig = {
 const persistedReducer = persistReducer(persistConfig, rootReducer)
 
 const store = configureStore({
-    reducer: persistedReducer,
-    middleware: (getDefaultMiddleware) =>
+    reducer    : persistedReducer,
+    middleware : (getDefaultMiddleware) =>
         getDefaultMiddleware({
             serializableCheck: {
                 ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],

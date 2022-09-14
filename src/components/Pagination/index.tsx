@@ -1,12 +1,20 @@
-import React from 'react';
+import React         from 'react';
 import {IPagination} from "./type";
 import {
     PaginationWrapper,
     NavigationButton
-} from './style'
+}                    from './style'
 
-const Pagination: React.FC<IPagination> = ({filmsPerPage, totalFilms, paginate, setCurrentPage, currentPage}) => {
+const Pagination: React.FC<IPagination> = ({
+    filmsPerPage,
+    totalFilms,
+    paginate,
+    setCurrentPage,
+    currentPage
+}) => {
+
     const pageNumber = []
+
     const nextPage = () => setCurrentPage(prev => prev + 1)
     const prevPage = () => setCurrentPage(prev => prev - 1)
 
@@ -27,16 +35,23 @@ const Pagination: React.FC<IPagination> = ({filmsPerPage, totalFilms, paginate, 
             <div>
                 {
                     pageNumber.map((number, index) => (
-                        <NavigationButton key={index} isActive={getActivePage(number)} onClick={() => paginate(number)}>
-
+                        <NavigationButton
+                            key={index}
+                            isActive={getActivePage(number)}
+                            onClick={() => paginate(number)}
+                        >
                             {number}
-
                         </NavigationButton>
                     ))
                 }
             </div>
 
-            <NavigationButton disabled={currentPage === pageNumber.length} onClick={nextPage}>&#62;</NavigationButton>
+            <NavigationButton
+                disabled={currentPage === pageNumber.length}
+                onClick={nextPage}
+            >
+                &#62;
+            </NavigationButton>
         </PaginationWrapper>
     );
 };
