@@ -11,7 +11,7 @@ export const Wrapper = styled.div`
 export const PostWrapper = styled.div`
   width: 200px;
   height: 440px;
-  margin: 20px;
+  margin: 20px 20px 0 20px;
   border-radius: 5px;
   position: relative;
 `

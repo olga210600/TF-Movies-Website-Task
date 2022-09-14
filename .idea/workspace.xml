@@ -2,17 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="51c7d252-da25-4583-b791-a3743993bce3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Pagination/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Pagination/style.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Pagination/type.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/FilmsRendering/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/FilmsRendering/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/FilmsRendering/style.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/FilmsRendering/style.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Post/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Post/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Pagination/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pagination/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Pagination/style.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pagination/style.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Post/style.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Post/style.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Post/type.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Post/type.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/RouterNavigation/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/RouterNavigation/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/RouterNavigation/style.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/RouterNavigation/style.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/LikedFilmPage/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/LikedFilmPage/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/MainPage/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/MainPage/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/suggestions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/suggestions.ts" afterDir="false" />
     </list>
@@ -78,7 +73,9 @@
       <workItem from="1662973977668" duration="17100000" />
       <workItem from="1663011994245" duration="5001000" />
       <workItem from="1663061070201" duration="15930000" />
-      <workItem from="1663102171141" duration="14944000" />
+      <workItem from="1663102171141" duration="15154000" />
+      <workItem from="1663147575210" duration="5501000" />
+      <workItem from="1663154187603" duration="5474000" />
     </task>
     <servers />
   </component>

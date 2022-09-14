@@ -7,7 +7,6 @@ import {
 
 const Pagination:React.FC<IPagination> = ({filmsPerPage, totalFilms, paginate, setCurrentPage , currentPage}) => {
     const pageNumber = []
-
     const nextPage = () => setCurrentPage(prev => prev + 1)
     const prevPage = () => setCurrentPage(prev => prev - 1)
 
@@ -24,7 +23,7 @@ const Pagination:React.FC<IPagination> = ({filmsPerPage, totalFilms, paginate, s
 
     return (
         <PaginationWrapper>
-            <NavigationButton onClick={prevPage}>&#60;</NavigationButton>
+            <NavigationButton disabled={currentPage === 1} onClick={prevPage}>&#60;</NavigationButton>
             <div>
                 {
                     pageNumber.map(number => (
@@ -38,7 +37,7 @@ const Pagination:React.FC<IPagination> = ({filmsPerPage, totalFilms, paginate, s
                     ))
                 }
             </div>
-            <NavigationButton onClick={nextPage}>&#62;</NavigationButton>
+            <NavigationButton disabled={currentPage === pageNumber.length} onClick={nextPage}>&#62;</NavigationButton>
         </PaginationWrapper>
     );
 };

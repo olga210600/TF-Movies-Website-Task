@@ -21,7 +21,7 @@ const MainPage: React.FC<IMainPage> = ({options}) => {
     console.log('filteredList',filteredList)
 
     const [currentPage, setCurrentPage] = useState(1)
-    const [filmsPerPage] = useState(10)
+    const [filmsPerPage] = useState(12)
     const lastFilmIndex = currentPage * filmsPerPage;
     const firstFilmIndex = lastFilmIndex - filmsPerPage;
     const currentFilms = filteredList.slice(firstFilmIndex, lastFilmIndex)

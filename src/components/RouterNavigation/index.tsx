@@ -39,6 +39,7 @@ const Navigation:React.FC<INavigation> = ({setAddModalActive, handleCategoryChan
     const isAdmin: boolean = useSelector((state: any) => state.moviesList.isAdmin);
     const history = createBrowserHistory();
     const currentPage = history.location.pathname;
+    let mainPage
 
     const likedMovies = movies.reduce((acc: IMovie[], movie: IMovie): IMovie[] => {
         if (movie.isLiked) {
@@ -57,6 +58,16 @@ const Navigation:React.FC<INavigation> = ({setAddModalActive, handleCategoryChan
     }, [])
 
     const dispatch = useDispatch();
+
+    if (currentPage === PATHS.MAIN){
+        mainPage = true
+        console.log(mainPage)
+    }else {
+        mainPage = false
+        console.log(mainPage)
+    }
+
+    console.log('history',history)
 
     return (
         <Wrapper>
@@ -120,7 +131,7 @@ const Navigation:React.FC<INavigation> = ({setAddModalActive, handleCategoryChan
                     </div>
 
                     <RegistrationWrapper>
-                        {isAdmin &&
+                        {isAdmin && mainPage &&
                         <AddBtn isActive={currentPage === '/movie-details'} onClick={() => {
                             setAddModalActive(true)
                         }}>
