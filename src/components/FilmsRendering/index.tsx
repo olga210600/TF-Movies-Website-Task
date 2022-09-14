@@ -1,31 +1,42 @@
-import React from 'react';
-import PaginationList from 'react-pagination-list';
+import React, {useState} from 'react';
 import Navigation from "../../components/RouterNavigation";
 import Post from "../../components/Post";
 import {IFilmsRendering} from './type';
+import Pagination from "../Pagination";
 import {
     Wrapper,
     FilmsWrapper
 } from './style';
 
-const FilmsRendering:React.FC<IFilmsRendering> = ({movies}) => {
+
+const FilmsRendering: React.FC<IFilmsRendering> = ({movies}) => {
+    const [currentPage, setCurrentPage] = useState(1)
+    const [filmsPerPage] = useState(10)
+    const lastFilmIndex = currentPage * filmsPerPage;
+    const firstFilmIndex = lastFilmIndex - filmsPerPage;
+    const currentFilms = movies.slice(firstFilmIndex, lastFilmIndex)
+
+    const paginate = pageNumber => setCurrentPage(pageNumber)
 
     return (
         <Wrapper>
             <Navigation handleCategoryChange={undefined} setAddModalActive={undefined}/>
 
             <FilmsWrapper>
-                <FilmsWrapper>
-                    <PaginationList
-                        data={movies}
-                        pageSize={8}
-                        layout={"row"}
-                        renderItem={(item, index) => (
-                            <Post filmId={item.id} key={index} movie={item}/>
-                        )}
-                    />
-                </FilmsWrapper>
+                <Post films={currentFilms}/>
             </FilmsWrapper>
+
+            <div>
+                <Pagination
+                    filmsPerPage={filmsPerPage}
+                    totalFilms={movies.length}
+                    paginate={paginate}
+                    setCurrentPage={setCurrentPage}
+                    currentPage={currentPage}
+                />
+
+            </div>
+
         </Wrapper>
     );
 };

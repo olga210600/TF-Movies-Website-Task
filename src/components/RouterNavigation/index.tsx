@@ -22,7 +22,8 @@ import {
     RegistrationWrapper,
     UserFilmWrapper,
     WatchLateFilmsWrapper,
-    LogoName
+    LogoName,
+    LinkLogOut
 } from './style';
 
 export const PATHS = {
@@ -137,10 +138,10 @@ const Navigation:React.FC<INavigation> = ({setAddModalActive, handleCategoryChan
                             </LogInOutWrapper>
                             :
                             <LogInOutWrapper>
-                                <Link isActive={currentPage === PATHS.MAIN} to={PATHS.MAIN}
+                                <LinkLogOut isActive={currentPage === PATHS.MAIN} to={PATHS.MAIN}
                                       onClick={() => dispatch(logOut())}>
                                     Log out
-                                </Link>
+                                </LinkLogOut>
                             </LogInOutWrapper>
                         }
                     </RegistrationWrapper>

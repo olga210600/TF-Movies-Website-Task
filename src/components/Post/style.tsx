@@ -1,6 +1,13 @@
 import styled from 'styled-components';
 import {Link as RouterLink} from 'react-router-dom';
 
+export const Wrapper = styled.div`
+  width: 90%;
+  display: flex;
+  margin: auto;
+  min-width: 550px;
+`
+
 export const PostWrapper = styled.div`
   width: 200px;
   height: 440px;
@@ -58,7 +65,7 @@ export const ButtonsWrapper = styled.div`
   height: 25px;
   align-items: center;
   display: flex;
-  font-size: 14px;
+  font-size: 13px;
   justify-content: space-between;
 `
 
@@ -71,6 +78,15 @@ export const WatchLateBtnWrapper = styled.div`
   text-align: center;
   border-radius: 5px;
   color: white;
+
+  :hover {
+    background: #5f5e5e;
+  }
+
+  :active{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  }
+  
 `
 
 export const LikedBtnWrapper = styled.div`
@@ -83,6 +99,14 @@ export const LikedBtnWrapper = styled.div`
   color: white;
   margin-right: 12px;
   border-radius: 5px;
+
+  :hover {
+    background: #5f5e5e;
+  }
+  
+  :active{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  }
 `
 
 export const Link = styled(RouterLink)`

@@ -1,23 +1,30 @@
 import React, {useState} from "react";
 import {useDispatch, useSelector} from 'react-redux';
-import PaginationList from 'react-pagination-list';
 import {IMovie, addNewMovie, selectedFilms} from "../../store/reducers/moviesReducer";
 import PageHeader from "../../components/PageHeader";
 import Post from "../../components/Post";
 import ModalWindow from "../../components/ModalWindow";
 import {IMainPage} from "./type";
+import Pagination from "../../components/Pagination";
 import {
     Wrapper,
     HeaderWrapper,
     FilmsWrapper,
-    HeaderLink,
-    Message
+    HeaderLink, Message,
 } from './style';
 
 const MainPage: React.FC<IMainPage> = ({options}) => {
     const [addModalActive, setAddModalActive] = useState(false)
     const movies: IMovie[] = useSelector((state: any) => state.moviesList.defaultData);
     const filteredList: IMovie[] = useSelector((state: any) => state.moviesList.filteredMovies);
+
+    console.log('filteredList',filteredList)
+
+    const [currentPage, setCurrentPage] = useState(1)
+    const [filmsPerPage] = useState(10)
+    const lastFilmIndex = currentPage * filmsPerPage;
+    const firstFilmIndex = lastFilmIndex - filmsPerPage;
+    const currentFilms = filteredList.slice(firstFilmIndex, lastFilmIndex)
     const dispatch = useDispatch();
 
     const handleCategoryChange = (event) => {
@@ -27,6 +34,8 @@ const MainPage: React.FC<IMainPage> = ({options}) => {
     const currentFunction = (values) => {
         dispatch(addNewMovie(values));
     }
+
+    const paginate = pageNumber => setCurrentPage(pageNumber)
 
     return (
         <Wrapper>
@@ -51,20 +60,25 @@ const MainPage: React.FC<IMainPage> = ({options}) => {
             <FilmsWrapper>
                 {
                     filteredList.length ?
-                        <PaginationList
-                            data={filteredList}
-                            pageSize={8}
-                            layout={"row"}
+                        <div>
+                            <Post films={currentFilms}/>
 
+                            <Pagination
+                                filmsPerPage={filmsPerPage}
+                                totalFilms={filteredList.length}
+                                paginate={paginate}
+                                setCurrentPage={setCurrentPage}
+                                currentPage={currentPage}
 
-                            renderItem={(item, index) => (
-                                <Post filmId={item.id} key={index} movie={item}/>
-
-                            )}
-                        />
+                            />
+                        </div>
                         :
-                        <Message>No movies in this category</Message>
+
+                    <Message>No movies in this category</Message>
+
+
                 }
+
 
             </FilmsWrapper>
 

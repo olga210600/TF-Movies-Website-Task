@@ -83,7 +83,7 @@ export const Link = styled(RouterLink)`
 
   && {     
     border-bottom: ${({isActive}) => (isActive ? "2px solid red" : "none")};
-    color: ${({isActive}) => (isActive ? "white" : "white")};
+    color: white;
     margin-right: 15px;
     padding: 5px;
 
@@ -91,6 +91,30 @@ export const Link = styled(RouterLink)`
       background: grey;
       padding: 5px;
       border-radius: 5px;
+    }
+
+    :active {
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    }
+  }
+`;
+
+export const LinkLogOut = styled(RouterLink)`
+  text-decoration: none;
+
+  && {     
+    color: white;
+    margin-right: 15px;
+    padding: 5px;
+
+    :hover {
+      background: grey;
+      padding: 5px;
+      border-radius: 5px;
+    }
+
+    :active {
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
     }
   }
 `;
