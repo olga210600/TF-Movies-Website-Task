@@ -12,6 +12,7 @@ import {
 const FilmsRendering: React.FC<IFilmsRendering> = ({movies}) => {
     const [currentPage, setCurrentPage] = useState(1)
     const [filmsPerPage] = useState(10)
+
     const lastFilmIndex = currentPage * filmsPerPage;
     const firstFilmIndex = lastFilmIndex - filmsPerPage;
     const currentFilms = movies.slice(firstFilmIndex, lastFilmIndex)
@@ -34,7 +35,6 @@ const FilmsRendering: React.FC<IFilmsRendering> = ({movies}) => {
                     setCurrentPage={setCurrentPage}
                     currentPage={currentPage}
                 />
-
             </div>
 
         </Wrapper>

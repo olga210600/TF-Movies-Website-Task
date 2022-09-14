@@ -44,7 +44,6 @@ const CurrentFilmInfo: React.FC<ICurrentFilmInfo> = ({movie}) => {
 
     const currentFunction = (values) => {
         dispatch(editMovie(values));
-        console.log('hete')
     }
 
     return (
@@ -65,7 +64,6 @@ const CurrentFilmInfo: React.FC<ICurrentFilmInfo> = ({movie}) => {
 
                         {isAuthorized &&
                         <UserBtnWrapper>
-
                             <LikeBtn
                                 onClick={() => dispatch(likedFilm(movie.id))}>{movie.isLiked ? 'Liked' : 'Like'}
                             </LikeBtn>
@@ -87,7 +85,6 @@ const CurrentFilmInfo: React.FC<ICurrentFilmInfo> = ({movie}) => {
                                         onClick={() => setEditModalActive(true)}
                                     />
                                 </BtnWrapper>
-
                             </EditBtnWrapper>
 
                             <DeleteBtnWrapper>

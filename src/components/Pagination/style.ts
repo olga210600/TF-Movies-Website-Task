@@ -27,7 +27,6 @@ export const NavigationButton = styled.button`
     :hover {
       background: #393939;
     }
-
   }
 
   :hover {

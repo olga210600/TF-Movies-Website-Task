@@ -1,10 +1,7 @@
-import {IMovie} from "../../store/reducers/moviesReducer";
-import {IOptions} from "../../suggestions";
-
 export interface IPagination {
     filmsPerPage: number,
     totalFilms: number,
     paginate: any,
     setCurrentPage: any,
-    currentPage:number,
+    currentPage: number,
 }

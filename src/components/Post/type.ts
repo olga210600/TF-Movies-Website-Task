@@ -1,7 +1,3 @@
-import {IMovie} from "../../store/reducers/moviesReducer";
-
-export interface IPost{
+export interface IPost {
     films: any,
-    // movie:IMovie,
-    // filmId: string
 }

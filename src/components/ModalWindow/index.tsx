@@ -28,11 +28,10 @@ const getInitialValues = (data) => ({
     id: data?.id ?? uuidv4(),
 });
 
-const ModalWindow:React.FC<IModalWindow> = ({date, options, currentFunction, currentButton, handleClose}) => {
+const ModalWindow: React.FC<IModalWindow> = ({date, options, currentFunction, currentButton, handleClose}) => {
     const initialValues = useMemo(() => getInitialValues(date), [date]);
 
     return (
-
         <Modal>
             <ModalContent>
                 <div>
@@ -45,7 +44,6 @@ const ModalWindow:React.FC<IModalWindow> = ({date, options, currentFunction, cur
                     >
                         {({values, errors, touched}) => {
 
-                            console.log('errors',errors)
                             return (
                                 <Form>
                                     <Header>Fill in the movie fields</Header>
@@ -130,6 +128,7 @@ const ModalWindow:React.FC<IModalWindow> = ({date, options, currentFunction, cur
                                     }}>
                                         &#10006;
                                     </CloseBtn>
+
                                 </Form>
                             );
                         }}

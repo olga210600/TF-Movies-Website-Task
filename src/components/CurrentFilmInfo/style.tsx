@@ -42,13 +42,12 @@ export const FilmInfo = styled.div`
 export const ImageWrapper = styled.div`
   width: 250px;
   height: 350px;
-  //margin: 40px 20px 40px 76px;
   object-fit: contain;
 `
+
 export const Image = styled.img`
   width: 100%;
   height: 100%;
-  
 `
 
 export const MovieName = styled.p`

@@ -15,13 +15,10 @@ import {
 
 const MainPage: React.FC<IMainPage> = ({options}) => {
     const [addModalActive, setAddModalActive] = useState(false)
-    const movies: IMovie[] = useSelector((state: any) => state.moviesList.defaultData);
-    const filteredList: IMovie[] = useSelector((state: any) => state.moviesList.filteredMovies);
-
-    console.log('filteredList',filteredList)
-
     const [currentPage, setCurrentPage] = useState(1)
     const [filmsPerPage] = useState(12)
+    const movies: IMovie[] = useSelector((state: any) => state.moviesList.defaultData);
+    const filteredList: IMovie[] = useSelector((state: any) => state.moviesList.filteredMovies);
     const lastFilmIndex = currentPage * filmsPerPage;
     const firstFilmIndex = lastFilmIndex - filmsPerPage;
     const currentFilms = filteredList.slice(firstFilmIndex, lastFilmIndex)
@@ -74,14 +71,10 @@ const MainPage: React.FC<IMainPage> = ({options}) => {
                         </div>
                         :
 
-                    <Message>No movies in this category</Message>
-
-
+                        <Message>No movies in this category</Message>
                 }
 
-
             </FilmsWrapper>
-
         </Wrapper>
     );
 };

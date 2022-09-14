@@ -6,7 +6,7 @@ import {
 } from "../ModalWindow/style";
 import {IFieldWrapper} from "./type";
 
-const FieldWrapper:React.FC<IFieldWrapper> = ({fieldName, fieldId, fieldLabel,placeholder, errors, touched}) => {
+const FieldWrapper: React.FC<IFieldWrapper> = ({fieldName, fieldId, fieldLabel, placeholder, errors, touched}) => {
     return (
         <FormField isError={errors[fieldName] && touched[fieldName]}>
             <label htmlFor={fieldName}>{fieldLabel}</label>

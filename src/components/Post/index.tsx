@@ -22,14 +22,13 @@ const Post: React.FC<IPost> = ({films}) => {
 
     return (
 
-            <Wrapper>
+        <Wrapper>
             {
-                films.map((film) => (
+                films.map((film, index) => (
 
-
-                        <PostWrapper>
-
-                            {isAdmin &&
+                        <PostWrapper key={index}>
+                            {
+                                isAdmin &&
                                 <CloseBtn onClick={() => dispatch(removeMovie(film.id))}>&#10006;</CloseBtn>
                             }
 
@@ -42,50 +41,24 @@ const Post: React.FC<IPost> = ({films}) => {
                                 <MovieName>{film.name}</MovieName>
                             </Link>
 
-                            {isAuthorized &&
-                            <ButtonsWrapper>
-                                <LikedBtnWrapper
-                                    onClick={() => dispatch(likedFilm(film.id))}>{film.isLiked ? 'Liked' : 'Like'}
-                                </LikedBtnWrapper>
+                            {
+                                isAuthorized &&
+                                <ButtonsWrapper>
+                                    <LikedBtnWrapper
+                                        onClick={() => dispatch(likedFilm(film.id))}>{film.isLiked ? 'Liked' : 'Like'}
+                                    </LikedBtnWrapper>
 
-                                <WatchLateBtnWrapper
-                                    onClick={() => dispatch(watchLateFilm(film.id))}>{film.isWatchLate ? 'Watched late' : 'Watch late'}
-                                </WatchLateBtnWrapper>
-                            </ButtonsWrapper>
-
+                                    <WatchLateBtnWrapper
+                                        onClick={() => dispatch(watchLateFilm(film.id))}>{film.isWatchLate ? 'Watched late' : 'Watch late'}
+                                    </WatchLateBtnWrapper>
+                                </ButtonsWrapper>
                             }
-
                         </PostWrapper>
                     )
                 )
             }
-            </Wrapper>
+        </Wrapper>
     );
 };
 
 export default Post;
-
-// import React from 'react';
-// import {Link, MovieImg, MovieImgWrapper, MovieName, PostWrapper} from "../Post/style";
-//
-// const Post = ({films, }) => {
-//     return (
-//         <div>
-//             {
-//                 films.map((film) => (
-//                         <Link to={{pathname: `/movie-details?filmId=${film.id}`}}>
-//                             <MovieImgWrapper>
-//
-//                                 <MovieImg  alt={film.name} title={film.name} src={film.image}/>
-//                             </MovieImgWrapper>
-//
-//                             <MovieName>{film.name}</MovieName>
-//                         </Link>
-//                     )
-//                 )
-//             }
-//         </div>
-//     );
-// };
-//
-// export default Post;
