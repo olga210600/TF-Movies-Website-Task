@@ -1,5 +1,5 @@
 // @ts-nocheck
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {useDispatch, useSelector} from "react-redux";
 import Navigation, {PATHS} from "../RouterNavigation";
 import {
@@ -42,14 +42,17 @@ const CurrentFilmInfo: React.FC<ICurrentFilmInfo> = ({movie}) => {
     const isAdmin: boolean = useSelector((state: any) => state.moviesList.isAdmin);
     const isAuthorized: boolean = useSelector((state: any) => state.moviesList.isAuthorized);
 
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
+
     const currentFunction = (values) => {
         dispatch(editMovie(values));
-        console.log('hete')
     }
 
     return (
         <PageWrapper>
-            <Navigation/>
+            <Navigation />
 
             <HeaderFilmInfo>
                 <FilmInfoWrapper>
@@ -65,7 +68,6 @@ const CurrentFilmInfo: React.FC<ICurrentFilmInfo> = ({movie}) => {
 
                         {isAuthorized &&
                         <UserBtnWrapper>
-
                             <LikeBtn
                                 onClick={() => dispatch(likedFilm(movie.id))}>{movie.isLiked ? 'Liked' : 'Like'}
                             </LikeBtn>
@@ -87,7 +89,6 @@ const CurrentFilmInfo: React.FC<ICurrentFilmInfo> = ({movie}) => {
                                         onClick={() => setEditModalActive(true)}
                                     />
                                 </BtnWrapper>
-
                             </EditBtnWrapper>
 
                             <DeleteBtnWrapper>

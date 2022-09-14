@@ -1,4 +1,4 @@
-export interface IPageHeader{
+export interface IPageHeader {
     setAddModalActive: any,
-    handleCategoryChange:any,
+    handleCategoryChange: any,
 }

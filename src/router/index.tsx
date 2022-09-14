@@ -23,7 +23,7 @@ const PublicRoutes = () => {
     return (
         <BrowserRouter>
             <Routes>
-                <Route exact path="/" element={withNavigation(MainPage , mockedData, mockedOptions)}/>
+                <Route exact path="/" element={withNavigation(MainPage, mockedData, mockedOptions)}/>
                 <Route path="/movie-details" element={withNavigation(FilmPage)}/>
                 <Route path="/registration-form" element={withNavigation(RegistrationPage, mockedData, mockedOptions)}/>
                 <Route path="/liked-movies" element={withNavigation(LikedFilmPage)}/>

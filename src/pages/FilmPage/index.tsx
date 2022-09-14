@@ -13,17 +13,16 @@ const FilmPage = () => {
     return (
         <div>
             {
-                movies.map(movie => {
+                movies.map((movie, index) => {
                         if (movie.id === filmName) {
 
                             return (
-                                <CurrentFilmInfo movie={movie}/>
+                                <CurrentFilmInfo key={index} movie={movie}/>
                             )
                         }
 
                     }
                 )
-
             }
         </div>
     );

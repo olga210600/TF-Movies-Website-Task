@@ -23,8 +23,11 @@ export const Wrapper = styled.div`
 `
 
 export const FilmsWrapper = styled.div`
-  display: flex;
-  justify-content: center;
-  margin: -85px auto 0;
- 
+  width: 90%;
+  max-width: 1200px;
+  margin: -200px auto 0;
+  padding-top: 30px;
+
+
+
 `

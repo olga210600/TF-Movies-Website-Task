@@ -45,7 +45,6 @@ const RegistrationForm = () => {
                 </Link>
             </MainPageLinkWrapper>
 
-
             <Formik
                 initialValues={{
                     email: "",
@@ -85,9 +84,7 @@ const RegistrationForm = () => {
                                     <StarPassword>*</StarPassword>
                                 </LabelWrapper>
 
-                                <Field id="password" name="password" placeholder="123"
-
-                                />
+                                <Field id="password" name="password" placeholder="123"/>
 
                                 {errors?.password && touched.password && (
                                     <ErrorMessage>{errors?.password}</ErrorMessage>

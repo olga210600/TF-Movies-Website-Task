@@ -5,7 +5,7 @@ import {IMovie} from "../../store/reducers/moviesReducer";
 import {logOut} from '../../store/reducers/moviesReducer';
 import {createBrowserHistory} from "history";
 import {mockedOptions} from "../../suggestions";
-import HeaderImgPost from "../../assets/interstellar-movie-movies-astronaut-sea-wallpaper-preview.jpg";
+import HeaderImgPost from "../../assets/galaxy-stars-space-24-4k.jpg";
 import {INavigation} from "./type";
 import {
     Wrapper,
@@ -22,7 +22,8 @@ import {
     RegistrationWrapper,
     UserFilmWrapper,
     WatchLateFilmsWrapper,
-    LogoName
+    LogoName,
+    LinkLogOut
 } from './style';
 
 export const PATHS = {
@@ -32,12 +33,13 @@ export const PATHS = {
     WATCH_LATE_MOVIE_PAGE: '/watch-late-movies'
 };
 
-const Navigation:React.FC<INavigation> = ({setAddModalActive, handleCategoryChange}) => {
+const Navigation: React.FC<INavigation> = ({setAddModalActive, handleCategoryChange}) => {
     const movies: IMovie[] = useSelector((state: any) => state.moviesList.defaultData);
     const isUser: boolean = useSelector((state: any) => state.moviesList.isAuthorized);
     const isAdmin: boolean = useSelector((state: any) => state.moviesList.isAdmin);
     const history = createBrowserHistory();
     const currentPage = history.location.pathname;
+    let mainPage
 
     const likedMovies = movies.reduce((acc: IMovie[], movie: IMovie): IMovie[] => {
         if (movie.isLiked) {
@@ -57,6 +59,12 @@ const Navigation:React.FC<INavigation> = ({setAddModalActive, handleCategoryChan
 
     const dispatch = useDispatch();
 
+    if (currentPage === PATHS.MAIN) {
+        mainPage = true
+    } else {
+        mainPage = false
+    }
+
     return (
         <Wrapper>
 
@@ -66,11 +74,11 @@ const Navigation:React.FC<INavigation> = ({setAddModalActive, handleCategoryChan
 
             <HeaderWrapper>
                 <LogoNameWrapper>
-
                     <LogoName isActive={currentPage === PATHS.MAIN} to={PATHS.MAIN}>
                         GalacticFilms
                     </LogoName>
                 </LogoNameWrapper>
+
                 <nav>
                     <LinkWrapper>
                         <Link isActive={currentPage === PATHS.MAIN} to={PATHS.MAIN}>
@@ -84,12 +92,12 @@ const Navigation:React.FC<INavigation> = ({setAddModalActive, handleCategoryChan
                                 onChange={handleCategoryChange}
                             >
                                 <option value="">All genres of films</option>
+
                                 {mockedOptions.map((option, index) => (
                                     <option key={index} value={option.value}>{option.label}</option>
                                 ))}
 
                             </select>
-
                         </SelectWrapper>
                     </LinkWrapper>
 
@@ -98,6 +106,7 @@ const Navigation:React.FC<INavigation> = ({setAddModalActive, handleCategoryChan
                             isUser &&
                             <UserFilmWrapper>
                                 {!!likedMovies.length && (
+
                                     <LikedFilmsWrapper>
                                         <Link isActive={currentPage === PATHS.LIKED_MOVIE_PAGE}
                                               to={PATHS.LIKED_MOVIE_PAGE}>
@@ -107,6 +116,7 @@ const Navigation:React.FC<INavigation> = ({setAddModalActive, handleCategoryChan
                                 )}
 
                                 {!!watchedLateMovies.length && (
+
                                     <WatchLateFilmsWrapper>
                                         <Link isActive={currentPage === PATHS.WATCH_LATE_MOVIE_PAGE}
                                               to={PATHS.WATCH_LATE_MOVIE_PAGE}>
@@ -119,11 +129,17 @@ const Navigation:React.FC<INavigation> = ({setAddModalActive, handleCategoryChan
                     </div>
 
                     <RegistrationWrapper>
-                        {isAdmin &&
-                        <AddBtn isActive={currentPage === '/movie-details'} onClick={() => {
-                            setAddModalActive(true)
-                        }}>
-                            Add Film</AddBtn>
+
+                        {
+                            isAdmin && mainPage &&
+                            <AddBtn
+                                isActive={currentPage === '/movie-details'}
+                                onClick={() => {
+                                    setAddModalActive(true)
+                                }}
+                            >
+                                Add Film
+                            </AddBtn>
                         }
 
                         {!isAdmin && !isUser ?
@@ -137,10 +153,10 @@ const Navigation:React.FC<INavigation> = ({setAddModalActive, handleCategoryChan
                             </LogInOutWrapper>
                             :
                             <LogInOutWrapper>
-                                <Link isActive={currentPage === PATHS.MAIN} to={PATHS.MAIN}
-                                      onClick={() => dispatch(logOut())}>
+                                <LinkLogOut isActive={currentPage === PATHS.MAIN} to={PATHS.MAIN}
+                                            onClick={() => dispatch(logOut())}>
                                     Log out
-                                </Link>
+                                </LinkLogOut>
                             </LogInOutWrapper>
                         }
                     </RegistrationWrapper>

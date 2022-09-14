@@ -1,6 +1,6 @@
 import {IMovie} from "../../store/reducers/moviesReducer";
 
-export interface IPost{
-    movie:IMovie,
-    filmId: string
+export interface IPost {
+    films: IMovie[];
+    addModalActive?: boolean;
 }
