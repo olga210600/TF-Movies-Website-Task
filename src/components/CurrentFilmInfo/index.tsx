@@ -1,18 +1,18 @@
 // @ts-nocheck
-import React, {useState, useEffect} from 'react';
-import {useDispatch, useSelector} from "react-redux";
-import Navigation, {PATHS} from "../RouterNavigation";
+import React, {useState, useEffect}  from 'react';
+import {useDispatch, useSelector}    from "react-redux";
+import Navigation, {PATHS}           from "../RouterNavigation";
 import {
     editMovie,
     likedFilm,
     watchLateFilm,
     removeMovie
-} from "../../store/reducers/moviesReducer";
-import {mockedOptions} from "../../suggestions";
-import ModalWindow from "../ModalWindow";
-import deleteImg from '../../assets/delete-svgrepo-com.svg';
-import editImg from '../../assets/edit-svgrepo-com.svg';
-import {ICurrentFilmInfo} from './type'
+}                                    from "../../store/reducers/moviesReducer";
+import {mockedOptions}               from "../../suggestions";
+import ModalWindow                   from "../ModalWindow";
+import deleteImg                     from '../../assets/delete-svgrepo-com.svg';
+import editImg                       from '../../assets/edit-svgrepo-com.svg';
+import { ICurrentFilmInfo }          from './type'
 import {
     PageWrapper,
     Link,
@@ -34,13 +34,16 @@ import {
     MovieVideo,
     UserBtnWrapper,
     WatchLateBtn
-} from './style';
+}                                    from './style';
 
-const CurrentFilmInfo: React.FC<ICurrentFilmInfo> = ({movie}) => {
-    const [editModalActive, setEditModalActive] = useState(false);
-    const dispatch = useDispatch();
-    const isAdmin: boolean = useSelector((state: any) => state.moviesList.isAdmin);
+const CurrentFilmInfo: React.FC<ICurrentFilmInfo> = ({
+     movie,
+}) => {
+
+    const [ editModalActive, setEditModalActive ] = useState(false);
+    const isAdmin: boolean      = useSelector((state: any) => state.moviesList.isAdmin);
     const isAuthorized: boolean = useSelector((state: any) => state.moviesList.isAuthorized);
+    const dispatch = useDispatch();
 
     useEffect(() => {
         window.scrollTo(0, 0)
@@ -52,7 +55,7 @@ const CurrentFilmInfo: React.FC<ICurrentFilmInfo> = ({movie}) => {
 
     return (
         <PageWrapper>
-            <Navigation />
+            <Navigation/>
 
             <HeaderFilmInfo>
                 <FilmInfoWrapper>
@@ -62,8 +65,11 @@ const CurrentFilmInfo: React.FC<ICurrentFilmInfo> = ({movie}) => {
 
                     <FilmInfo>
                         <MovieName>{movie.name}</MovieName>
+
                         <MovieYear>Year of release: {movie.year}</MovieYear>
+
                         <MovieGenre>Genre: {movie.genre}</MovieGenre>
+
                         <MovieDirected>Directed by: {movie.director}</MovieDirected>
 
                         {isAuthorized &&
@@ -96,10 +102,8 @@ const CurrentFilmInfo: React.FC<ICurrentFilmInfo> = ({movie}) => {
                                     <img title='delete film' alt='delete film' src={deleteImg}/>
                                 </Link>
                             </DeleteBtnWrapper>
-
                         </ButtonsWrapper>
                         }
-
                     </FilmInfo>
                 </FilmInfoWrapper>
             </HeaderFilmInfo>
@@ -114,7 +118,6 @@ const CurrentFilmInfo: React.FC<ICurrentFilmInfo> = ({movie}) => {
                     frameBorder="0"
                     allowFullScreen>
                 </iframe>
-
             </MovieVideo>
 
             {

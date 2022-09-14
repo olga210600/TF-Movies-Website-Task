@@ -1,6 +1,6 @@
-import React from 'react';
-import {useSelector} from "react-redux";
-import {IMovie} from "../../store/reducers/moviesReducer";
+import React          from 'react';
+import {useSelector}  from "react-redux";
+import {IMovie}       from "../../store/reducers/moviesReducer";
 import FilmsRendering from "../../components/FilmsRendering";
 
 const WatchLateFilmPage = () => {

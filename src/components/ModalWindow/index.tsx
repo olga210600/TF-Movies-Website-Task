@@ -1,11 +1,11 @@
-import React, {useMemo} from 'react';
-import {Formik, Field, Form} from "formik";
-import {validateSchema} from "./schema";
-import {v4 as uuidv4} from 'uuid';
-import isEmpty from 'lodash/isEmpty';
-import FieldWrapper from "../FieldWrapper";
-import {IModalWindow} from "./type";
-import SelectComponent from "../SelectComponent";
+import React, { useMemo }      from 'react';
+import { Formik, Field, Form } from "formik";
+import { validateSchema }      from "./schema";
+import { v4 as uuidv4 }        from 'uuid';
+import isEmpty                 from 'lodash/isEmpty';
+import FieldWrapper            from "../FieldWrapper";
+import { IModalWindow }        from "./type";
+import SelectComponent         from "../SelectComponent";
 import {
     CurrentBtnWrapper,
     CloseBtn,
@@ -15,20 +15,27 @@ import {
     CurrentBtn,
     ErrorMessage,
     FormField
-} from './style'
+}                              from './style'
 
 const getInitialValues = (data) => ({
-    name: data?.name ?? "",
-    image: data?.image ?? "",
-    year: data?.year ?? "",
-    genre: data?.genre ?? "",
-    description: data?.description ?? "",
-    director: data?.director ?? "",
-    video: data?.video ?? "",
-    id: data?.id ?? uuidv4(),
+    name        : data?.name ?? "",
+    image       : data?.image ?? "",
+    year        : data?.year ?? "",
+    genre       : data?.genre ?? "",
+    description : data?.description ?? "",
+    director    : data?.director ?? "",
+    video       : data?.video ?? "",
+    id          : data?.id ?? uuidv4(),
 });
 
-const ModalWindow: React.FC<IModalWindow> = ({date, options, currentFunction, currentButton, handleClose}) => {
+const ModalWindow: React.FC<IModalWindow> = ({
+     date,
+     options,
+     currentFunction,
+     currentButton,
+     handleClose
+}) => {
+
     const initialValues = useMemo(() => getInitialValues(date), [date]);
 
     return (
@@ -42,7 +49,8 @@ const ModalWindow: React.FC<IModalWindow> = ({date, options, currentFunction, cu
                         validationSchema={validateSchema}
                         validateOnMount
                     >
-                        {({values, errors, touched}) => {
+
+                        { ({values, errors, touched}) => {
 
                             return (
                                 <Form>
@@ -74,6 +82,7 @@ const ModalWindow: React.FC<IModalWindow> = ({date, options, currentFunction, cu
 
                                     <FormField isError={errors?.genre && touched.genre}>
                                         <label htmlFor="genre">Genre</label>
+
                                         <Field
                                             id="genre"
                                             name="genre"
@@ -123,12 +132,9 @@ const ModalWindow: React.FC<IModalWindow> = ({date, options, currentFunction, cu
                                         </CurrentBtn>
                                     </CurrentBtnWrapper>
 
-                                    <CloseBtn onClick={() => {
-                                        handleClose()
-                                    }}>
+                                    <CloseBtn onClick={() => {handleClose()}}>
                                         &#10006;
                                     </CloseBtn>
-
                                 </Form>
                             );
                         }}

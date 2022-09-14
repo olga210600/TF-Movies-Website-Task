@@ -1,7 +1,7 @@
-import React from 'react';
-import {useSelector} from "react-redux";
-import FilmsRendering from "../../components/FilmsRendering";
-import {IMovie} from "../../store/reducers/moviesReducer";
+import React           from 'react';
+import { useSelector } from "react-redux";
+import FilmsRendering  from "../../components/FilmsRendering";
+import { IMovie }      from "../../store/reducers/moviesReducer";
 
 const LikedFilmPage = () => {
     const movies: IMovie[] = useSelector((state: any) => state.moviesList.filteredMovies);
@@ -10,8 +10,7 @@ const LikedFilmPage = () => {
         if (movie.isLiked) {
             acc.push(movie);
         }
-
-        return acc
+        return acc;
     }, [])
 
     return (

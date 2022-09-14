@@ -1,7 +1,7 @@
-import React from 'react';
+import React          from 'react';
+import PublicRoutes   from "./router";
+import { WrapperApp } from './style';
 import './App.css';
-import PublicRoutes from "./router";
-import {WrapperApp} from './style';
 
 function App() {
     return (
