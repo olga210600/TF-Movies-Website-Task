@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import {useDispatch, useSelector} from 'react-redux';
 import {IMovie, addNewMovie, selectedFilms} from "../../store/reducers/moviesReducer";
 import PageHeader from "../../components/PageHeader";
@@ -23,6 +23,10 @@ const MainPage: React.FC<IMainPage> = ({options}) => {
     const firstFilmIndex = lastFilmIndex - filmsPerPage;
     const currentFilms = filteredList.slice(firstFilmIndex, lastFilmIndex)
     const dispatch = useDispatch();
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [currentPage])
 
     const handleCategoryChange = (event) => {
         dispatch(selectedFilms(event.target.value));

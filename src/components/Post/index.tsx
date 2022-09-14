@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {useDispatch, useSelector} from "react-redux";
 import {removeMovie, likedFilm, watchLateFilm} from '../../store/reducers/moviesReducer';
 import {IPost} from "./type";
@@ -19,6 +19,10 @@ const Post: React.FC<IPost> = ({films}) => {
     const isAdmin: boolean = useSelector((state: any) => state.moviesList.isAdmin)
     const isAuthorized: boolean = useSelector((state: any) => state.moviesList.isAuthorized)
     const dispatch = useDispatch()
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
 
     return (
 

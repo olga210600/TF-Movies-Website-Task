@@ -1,4 +1,4 @@
 export interface INavigation {
-    setAddModalActive: any,
-    handleCategoryChange :any,
+    setAddModalActive?: any;
+    handleCategoryChange?: any;
 }

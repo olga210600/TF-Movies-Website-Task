@@ -198,7 +198,7 @@ export const HeaderWrapper = styled.div`
     transform: translate(-50%, -50%);
   }
 
-  @media (min-device-width: 320px) and (max-device-width: 568px) {
-    background: red;
-  }
+  //@media (min-device-width: 320px) and (max-device-width: 568px) {
+  //  background: red;
+  //}
 `

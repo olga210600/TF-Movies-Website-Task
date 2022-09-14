@@ -28,6 +28,17 @@ export const ModalContent = styled.div`
   position: relative;
 `
 
+export const ModalHiddenBackground = styled.div`
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9;
+  background-color: rgba(0, 0, 0, 0.4);
+`
+
 export const Header = styled.h1`
   width: 400px;
   margin: 0 auto 30px;

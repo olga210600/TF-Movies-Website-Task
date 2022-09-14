@@ -4,28 +4,12 @@
     <list default="true" id="51c7d252-da25-4583-b791-a3743993bce3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/CurrentFilmInfo/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CurrentFilmInfo/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/CurrentFilmInfo/style.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CurrentFilmInfo/style.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/FieldWrapper/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/FieldWrapper/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/FilmsRendering/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/FilmsRendering/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/FilmsRendering/style.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/FilmsRendering/style.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ModalWindow/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ModalWindow/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PageHeader/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PageHeader/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PageHeader/type.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PageHeader/type.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Pagination/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pagination/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Pagination/style.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pagination/style.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Pagination/type.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pagination/type.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ModalWindow/style.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ModalWindow/style.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ModalWindow/type.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ModalWindow/type.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Post/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Post/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Post/type.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Post/type.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/RouterNavigation/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/RouterNavigation/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SelectComponent/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SelectComponent/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/FilmPage/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/FilmPage/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/LikedFilmPage/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/LikedFilmPage/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/RouterNavigation/style.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/RouterNavigation/style.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/MainPage/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/MainPage/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/RegistrationPage/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/RegistrationPage/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/RegistrationPage/styles.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/RegistrationPage/styles.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/WatchLateFilmPage/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/WatchLateFilmPage/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/router/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/suggestions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/suggestions.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,6 +76,7 @@
       <workItem from="1663102171141" duration="15154000" />
       <workItem from="1663147575210" duration="5501000" />
       <workItem from="1663154187603" duration="9009000" />
+      <workItem from="1663184721688" duration="3196000" />
     </task>
     <servers />
   </component>

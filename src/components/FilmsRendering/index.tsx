@@ -21,7 +21,7 @@ const FilmsRendering: React.FC<IFilmsRendering> = ({movies}) => {
 
     return (
         <Wrapper>
-            <Navigation handleCategoryChange={undefined} setAddModalActive={undefined}/>
+            <Navigation/>
 
             <FilmsWrapper>
                 <Post films={currentFilms}/>
