@@ -43,6 +43,11 @@ export const LogoName = styled(RouterLink)`
   cursor          : pointer;
 `
 
+export const Slogan = styled.div`
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 3px;
+`
+
 export const LinkWrapper = styled.div`
   display     : flex;
   align-items : center;

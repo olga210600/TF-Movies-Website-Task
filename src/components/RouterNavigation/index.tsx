@@ -23,7 +23,8 @@ import {
     UserFilmWrapper,
     WatchLateFilmsWrapper,
     LogoName,
-    LinkLogOut
+    LinkLogOut,
+    Slogan,
 }                                 from './style';
 
 export const PATHS = {
@@ -79,6 +80,8 @@ const Navigation: React.FC<INavigation> = ({
                     <LogoName isActive={currentPage === PATHS.MAIN} to={PATHS.MAIN}>
                         GalacticFilms
                     </LogoName>
+
+                    <Slogan>Your exciting galaxy of films</Slogan>
                 </LogoNameWrapper>
 
                 <nav>

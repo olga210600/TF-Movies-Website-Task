@@ -3,7 +3,23 @@
   <component name="ChangeListManager">
     <list default="true" id="51c7d252-da25-4583-b791-a3743993bce3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/add-tool-svgrepo-com.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/headerPage — копия.jfif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/headerPage.jfif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/interstellar-movie-movies-astronaut-sea-wallpaper-preview.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/interstellar.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/space.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/v23a6642e7886qe91v42i.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CurrentFilmInfo/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CurrentFilmInfo/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CurrentFilmInfo/style.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CurrentFilmInfo/style.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/FilmsRendering/style.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/FilmsRendering/style.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ModalWindow/style.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ModalWindow/style.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Pagination/style.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pagination/style.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Posts/style.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Posts/style.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/RouterNavigation/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/RouterNavigation/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/RouterNavigation/style.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/RouterNavigation/style.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/style.tsx" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +95,7 @@
       <workItem from="1663147575210" duration="5501000" />
       <workItem from="1663154187603" duration="9009000" />
       <workItem from="1663184721688" duration="3196000" />
-      <workItem from="1663251969337" duration="1352000" />
+      <workItem from="1663251969337" duration="6197000" />
     </task>
     <servers />
   </component>

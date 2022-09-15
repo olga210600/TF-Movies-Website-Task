@@ -36,15 +36,20 @@ export const Header = styled.h1`
 `
 
 export const CloseBtn = styled.button`
-  background : red;
-  border     : none;
-  width      : 30px;
-  height     : 30px;
-  position   : absolute;
-  color      : white;
-  font-size  : 15px;
-  top        : 10px;
-  right      : 10px;
+  background: red;
+  border: none;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  color: white;
+  font-size: 15px;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+
+  :hover {
+    background : #b30808;  
+  }
 `
 
 export const CurrentBtnWrapper = styled.div`

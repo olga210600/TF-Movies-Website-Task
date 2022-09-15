@@ -6,8 +6,12 @@ export const Wrapper = styled.div`
   padding-bottom : 50px;
   min-width      : 670px;
   height         : 100%;
-  min-height     : 1500px;
 
+  @media (min-device-width: 320px) and (max-device-width: 568px) {
+    height :        1500px;
+   background: blue;
+  }
+  
   & div {
 
     & div {

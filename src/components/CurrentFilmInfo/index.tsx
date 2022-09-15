@@ -41,6 +41,7 @@ const CurrentFilmInfo: React.FC<ICurrentFilmInfo> = ({
 }) => {
 
     const [ editModalActive, setEditModalActive ] = useState(false);
+
     const isAdmin: boolean      = useSelector((state: any) => state.moviesList.isAdmin);
     const isAuthorized: boolean = useSelector((state: any) => state.moviesList.isAuthorized);
     const dispatch = useDispatch();
@@ -90,8 +91,8 @@ const CurrentFilmInfo: React.FC<ICurrentFilmInfo> = ({
                                 <BtnWrapper>
                                     <img
                                         src={editImg}
-                                        alt='editBtn'
-                                        title='editBtn'
+                                        alt='edit film'
+                                        title='edit film'
                                         onClick={() => setEditModalActive(true)}
                                     />
                                 </BtnWrapper>

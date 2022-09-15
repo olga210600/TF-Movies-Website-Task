@@ -25,7 +25,7 @@ export const FilmInfoWrapper = styled.div`
   box-sizing      : border-box;
   justify-content : center;
   position        : absolute;
-  top             : -220px;
+  top             : -190px;
   left            : 50%;
   transform       : translate(-50%, -50%);
 `
@@ -45,8 +45,9 @@ export const ImageWrapper = styled.div`
 `
 
 export const Image = styled.img`
-  width  : 100%;
-  height : 100%;
+  width         : 100%;
+  height        : 100%;
+  border-radius : 5px;
 `
 
 export const MovieName = styled.p`
@@ -145,6 +146,15 @@ export const LikeBtn = styled.button`
   border-radius : 5px;
   border        : none;
   font-size     : 15px;
+  cursor        : pointer;
+
+  :hover {
+    background : #5f5e5e;
+  }
+
+  :active {
+    box-shadow : rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  }
 `
 
 export const WatchLateBtn = styled.button`
@@ -156,4 +166,13 @@ export const WatchLateBtn = styled.button`
   border-radius : 5px;
   border        : none;
   font-size     : 15px;
+  cursor        : pointer;
+
+  :hover {
+    background : #5f5e5e;
+  }
+
+  :active {
+    box-shadow : rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  }
 `

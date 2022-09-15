@@ -19,7 +19,8 @@ export const NavigationButton = styled.button`
   margin        : 5px;
   background    : ${({isActive}) => (isActive ? "#414141" : "#7a7a7a")};
   border        : ${({isActive}) => (isActive ? "solid 3px white" : "none")};
-
+  cursor        : pointer;
+  
   &:disabled {
     background : #393939;
 
