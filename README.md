@@ -1,3 +1,14 @@
+admin login:  admin@gmail.com
+admin password: 12345
+
+If you enter a different username and password, you can register as a user with the ability to save your favorite movies and add movies to watch them later
+
+To add a video to your movie you need:
+1) Find the movie on youtube;
+2) Click the share button;
+   3)Click the embed button;
+4) Copy the link that is in the scr without quotes;
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) TS template.

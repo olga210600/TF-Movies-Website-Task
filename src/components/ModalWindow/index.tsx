@@ -66,7 +66,7 @@ const ModalWindow: React.FC<IModalWindow> = ({
 
                                     <FieldWrapper fieldName='image'
                                                   fieldId='image'
-                                                  placeholder='Movie image'
+                                                  placeholder='Movie image URL'
                                                   fieldLabel='Movie image:'
                                                   errors={errors}
                                                   touched={touched}
@@ -114,7 +114,7 @@ const ModalWindow: React.FC<IModalWindow> = ({
 
                                     <FieldWrapper fieldName='video'
                                                   fieldId='video'
-                                                  placeholder='Movie video'
+                                                  placeholder='Movie video URL'
                                                   fieldLabel='Movie video:'
                                                   errors={errors}
                                                   touched={touched}

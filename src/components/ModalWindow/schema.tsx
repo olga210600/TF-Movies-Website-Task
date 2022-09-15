@@ -2,9 +2,9 @@ import * as Yup from "yup";
 
 const validateMessages = {
     name : {
-        required : "movie Name cannot be empty",
-        min      : "movie Name cannot be less than 2 characters",
-        max      : "movie Name cannot be longer than 40 characters",
+        required : "Movie name cannot be empty",
+        min      : "Movie name cannot be less than 2 characters",
+        max      : "Movie name cannot be longer than 40 characters",
     },
     image : {
         required : "Movie image cannot be empty",
