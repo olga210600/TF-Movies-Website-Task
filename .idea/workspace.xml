@@ -2,23 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="51c7d252-da25-4583-b791-a3743993bce3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/components/CurrentFilmInfo/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CurrentFilmInfo/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/CurrentFilmInfo/style.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CurrentFilmInfo/style.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/CurrentFilmInfo/type.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CurrentFilmInfo/type.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/FieldWrapper/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/FieldWrapper/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/FieldWrapper/type.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/FieldWrapper/type.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/FilmsRendering/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/FilmsRendering/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/FilmsRendering/style.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/FilmsRendering/style.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/FilmsRendering/type.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/FilmsRendering/type.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ModalWindow/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ModalWindow/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ModalWindow/schema.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ModalWindow/schema.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ModalWindow/style.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ModalWindow/style.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ModalWindow/type.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ModalWindow/type.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PageHeader/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PageHeader/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PageHeader/type.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PageHeader/type.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Pagination/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pagination/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Pagination/style.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pagination/style.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Pagination/type.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pagination/type.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/RouterNavigation/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/RouterNavigation/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +12,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="ProjectId" id="2Eck28utGRtZsuMpDHDKcSkdpSS" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -86,6 +79,7 @@
       <workItem from="1663147575210" duration="5501000" />
       <workItem from="1663154187603" duration="9009000" />
       <workItem from="1663184721688" duration="3196000" />
+      <workItem from="1663251969337" duration="1352000" />
     </task>
     <servers />
   </component>

@@ -87,19 +87,25 @@ const Navigation: React.FC<INavigation> = ({
                             Main page
                         </Link>
 
-                        <SelectWrapper>
-                            <select
-                                name="category-list"
-                                id="category-list"
-                                onChange={handleCategoryChange}
-                            >
-                                <option value="">All genres of films</option>
 
-                                {mockedOptions.map((option, index) => (
-                                    <option key={index} value={option.value}>{option.label}</option>
-                                ))}
-                            </select>
-                        </SelectWrapper>
+                        {
+                          mainPage && (
+                              <SelectWrapper>
+                                  <select
+                                      name="category-list"
+                                      id="category-list"
+                                      onChange={handleCategoryChange}
+                                  >
+                                      <option value="">All genres of films</option>
+
+                                      {mockedOptions.map((option, index) => (
+                                          <option key={index} value={option.value}>{option.label}</option>
+                                      ))}
+                                  </select>
+                              </SelectWrapper>
+                          )
+                        }
+
                     </LinkWrapper>
 
                     <div>
