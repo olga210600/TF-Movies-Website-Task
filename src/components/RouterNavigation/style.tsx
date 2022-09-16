@@ -44,8 +44,8 @@ export const LogoName = styled(RouterLink)`
 `
 
 export const Slogan = styled.div`
-  font-family: 'Playfair Display', serif;
-  letter-spacing: 3px;
+  font-family    : 'Playfair Display', serif;
+  letter-spacing : 3px;
 `
 
 export const LinkWrapper = styled.div`
@@ -84,7 +84,7 @@ export const LogInOutWrapper = styled.div`
 `
 
 export const Link = styled(RouterLink)`
-  text-decoration : none;
+  text-decoration: none;
 
   && {
     border-bottom : ${({isActive}) => (isActive ? "2px solid red" : "none")};
@@ -93,7 +93,7 @@ export const Link = styled(RouterLink)`
     padding       : 5px;
 
     :hover {
-      background    : grey;
+      background    : rgba(233, 233, 233, 0.25);
       padding       : 5px;
       border-radius : 5px;
     }
@@ -113,7 +113,7 @@ export const LinkLogOut = styled(RouterLink)`
     padding      : 5px;
 
     :hover {
-      background    : grey;
+      background    : rgba(233, 233, 233, 0.25);
       padding       : 5px;
       border-radius : 5px;
     }
@@ -130,9 +130,9 @@ export const AddBtn = styled.button`
   height        : 30px;
   margin-right  : 15px;
   border        : none;
-  background    : #69696d;
   color         : white;
   border-radius : 5px;
+  background    : rgba(233, 233, 233, 0.15);
 
   :hover {
     color : grey;

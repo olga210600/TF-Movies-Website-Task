@@ -4,7 +4,7 @@ import FilmsRendering  from "../../components/FilmsRendering";
 import { IMovie }      from "../../store/reducers/moviesReducer";
 
 const LikedFilmPage = () => {
-    const movies: IMovie[] = useSelector((state: any) => state.moviesList.filteredMovies);
+    const movies: IMovie[] = useSelector((state: any) => state.moviesList.defaultData);
 
     const likedMovies = movies.reduce((acc: IMovie[], movie: IMovie): IMovie[] => {
         if (movie.isLiked) {

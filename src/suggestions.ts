@@ -419,6 +419,4 @@ export const defaultData = [
         isLiked     : false,
         isWatchLate : false,
     },
-
-
 ]

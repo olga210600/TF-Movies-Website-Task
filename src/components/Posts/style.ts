@@ -48,20 +48,20 @@ export const MovieImg = styled.img`
 `
 
 export const CloseBtn = styled.button`
-  width: 35px;
-  height: 35px;
-  border-radius: 50%;
-  color: white;
-  background: red;
-  font-size: 15px;
-  border: none;
-  position: absolute;
-  left: 183px;
-  top: -18px;
-  cursor: pointer;
+  width         : 35px;
+  height        : 35px;
+  border-radius : 50%;
+  color         : white;
+  background    : red;
+  font-size     : 15px;
+  border        : none;
+  position      : absolute;
+  left          : 183px;
+  top           : -18px;
+  cursor        : pointer;
 
   :hover {
-    background: #b30808;
+    background : #b30808;
   }
 `
 
@@ -108,11 +108,11 @@ export const LikedBtnWrapper = styled.div`
   cursor        : pointer;
 
   :hover {
-    background: #5f5e5e;
+    background : #5f5e5e;
   }
 
   :active {
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    box-shadow : rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
   }
 `
 

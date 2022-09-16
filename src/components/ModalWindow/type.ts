@@ -1,4 +1,4 @@
-import { IMovie } from "../../store/reducers/moviesReducer";
+import { IMovie }   from "../../store/reducers/moviesReducer";
 import { IOptions } from "../../suggestions";
 
 export interface IModalWindow {

@@ -90,7 +90,6 @@ const Navigation: React.FC<INavigation> = ({
                             Main page
                         </Link>
 
-
                         {
                           mainPage && (
                               <SelectWrapper>
