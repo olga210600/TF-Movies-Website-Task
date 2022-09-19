@@ -5,6 +5,8 @@ export const Wrapper = styled.div`
   box-sizing     : border-box;
   padding-bottom : 50px;
   min-width      : 670px;
+  height: 100%;
+
 
   & div {
     & div {
@@ -21,7 +23,7 @@ export const Wrapper = styled.div`
 
 export const Message = styled.h1`
   width      : 500px;
-  height     : 100px;
+  height     : 100vh;
   color      : white;
   font-size  : 35px;
   margin     : auto;

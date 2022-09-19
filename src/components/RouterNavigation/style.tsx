@@ -84,7 +84,7 @@ export const LogInOutWrapper = styled.div`
 `
 
 export const Link = styled(RouterLink)`
-  text-decoration: none;
+  text-decoration : none;
 
   && {
     border-bottom : ${({isActive}) => (isActive ? "2px solid red" : "none")};

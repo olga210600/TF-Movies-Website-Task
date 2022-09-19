@@ -3,15 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="51c7d252-da25-4583-b791-a3743993bce3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/FilmsRendering/style.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/FilmsRendering/style.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ModalWindow/type.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ModalWindow/type.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Posts/style.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Posts/style.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/RouterNavigation/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/RouterNavigation/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ModalWindow/style.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ModalWindow/style.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/RouterNavigation/style.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/RouterNavigation/style.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/LikedFilmPage/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/LikedFilmPage/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/MainPage/type.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/MainPage/type.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/WatchLateFilmPage/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/WatchLateFilmPage/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/suggestions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/suggestions.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/MainPage/style.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/MainPage/style.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,6 +83,7 @@
       <workItem from="1663184721688" duration="3196000" />
       <workItem from="1663251969337" duration="7512000" />
       <workItem from="1663327618073" duration="2329000" />
+      <workItem from="1663489000008" duration="3376000" />
     </task>
     <servers />
   </component>
